@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação Continuada 01</title>
+</head>
+<body>
+    <div id="content">
+        <h2>Distribuidora Pedeágua</h2>
+        <h4>Orçamento de Vendas</h4><br>
+
+        <b>Água Natural</b><br>
+        Digite o valor da venda: <input type="text" id="venda_natural"><br>
+        Digite a quantidade: <input type="text" id="quant_natural"><br>
+
+        <br><b>Água com Gás</b><br>
+        Digite o valor da venda: <input type="text" id="venda_gas"><br>
+        Digite a quantidade: <input type="text" id="quant_gas"><br>
+
+        <img onclick="calc()" style="height: 40px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0X2R_5A90Wgt1fwFrLamzsMVqwB3khmllHQ&usqp=CAU">
+    </div>
+
+    <div id="analysis" style="display: none;">
+        <h3>Análise Orçamentária</h3>
+
+        Total de unidades deste orçamento: <b id="total_geral">0</b><br>
+        Água Natural – Quantidade solicitada <b id="quantidade_natural" style="color: lightseagreen;">0</b> - Valor Total da água natural: <b id="total_natural" style="color: lightseagreen;">R$ <span id="total_natural_valor">0</span></b><br>
+        Água com Gás – Quantidade solicitada <b id="quantidade_gas" style="color: lightgreen;">0</b> - Valor Total da água com gás: <b id="total_gas" style="color: lightgreen;">R$ <span id="total_gas_valor">0</span></b><br>
+        <span style="background-color: lightgray;">Valor total deste Orçamento: <b>R$ <span id="total_geral_valor">0</span></b></span><br><br>
+
+        Neste orçamento a proporção do valor da <span style="background-color: lightseagreen;">Água Natural</span> em relação ao total foi de: <span id="proporcao_natural" style="color: lightseagreen;">0</span><br>
+        Neste orçamento a proporção do valor da <span style="background-color: lightgreen;">Água com Gás</span> em relação ao total foi de: <span id="proporcao_gas" style="color: lightgreen;">0</span><br>
+        A quantidade de Água Natural é de <span id="proporcao_quant_natural" style="color: lightseagreen;">0</span> em relação ao total e a Água com Gás é: <span id="proporcao_quant_gas" style="color: lightgreen;">0</span><br>
+
+        <div id="barras" style="height: 30px; width: 500px; display: flex;">
+            <div id="barra_natural" style="background-color: lightseagreen; height: 30px; width: 50%;"></div>
+            <div id="barra_gas" style="background-color: lightgreen; height: 30px; width: 50%;"></div>
+        </div>
+
+        <br><img src="https://blog.midianoalvo.com.br/wp-content/uploads/2019/11/calculo-custo-por-mil-900x506.jpg">
+    </div>
+</body>
+</html>
+
+<script>
+    // definindo as variáveis globais
+    var natural_vendas = 0;
+    var natural_quant = 0;
+    var gas_vendas = 0;
+    var gas_quant = 0;
+
+    function calc(){
+        // atribuindo valor às variáveis globais
+        natural_vendas = Number(venda_natural.value);
+        natural_quant = Number(quant_natural.value);
+        gas_vendas = Number(venda_gas.value);
+        gas_quant = Number(quant_gas.value);
+
+        // preparando os cálculos
+        var quant_geral = natural_quant + gas_quant;
+        var natural_valor = natural_vendas * natural_quant;
+        var gas_valor = gas_vendas * gas_quant;
+        var valor_total = natural_valor + gas_valor;
+        var propo_natural = (natural_valor / (natural_valor + gas_valor)) * 100;
+        var propo_gas = (gas_valor / (natural_valor + gas_valor)) * 100;
+        var propo_quant_natural = (natural_quant / (natural_quant + gas_quant)) * 100;
+        var propo_quant_gas = (gas_quant / (natural_quant + gas_quant)) * 100;
+        // 
+
+        // mostrando e escondendo as duas divs
+        content.style.display = "none";
+        analysis.style.display = "block";
+
+        // exibindo os cálculos e valores na tela
+        total_geral.innerHTML = quant_geral;
+        quantidade_natural.innerHTML = natural_quant;
+        total_natural_valor.innerHTML = (natural_valor).toFixed(2);
+        quantidade_gas.innerHTML = gas_quant;
+        total_gas_valor.innerHTML = (gas_valor).toFixed(2);
+        total_geral_valor.innerHTML = (valor_total).toFixed(2);
+        proporcao_natural.innerHTML = (propo_natural).toFixed(2) + "%";
+        proporcao_gas.innerHTML = (propo_gas).toFixed(2) + "%";
+        proporcao_quant_natural.innerHTML = (propo_quant_natural).toFixed(2) + "%";
+        proporcao_quant_gas.innerHTML = (propo_quant_gas).toFixed(2) + "%";
+
+        // controlando os tamanhos das barras
+        barra_natural.style.width = propo_natural + "%";
+        barra_gas.style.width = propo_gas + "%";
+    }
+</script>

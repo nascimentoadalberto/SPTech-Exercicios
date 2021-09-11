@@ -1,0 +1,39 @@
+<!-- * Crie um programa em HTML/JS que ajude a ensinar crianças sobre os semáforos. 
+* a) Tente "desenhar" um semáforo simples (preto com a luzes vermelha, amarela e verde, uma abaixo da outra) usando div e img (imagens de círculos com as 3 cores) 
+* b) Ao clicar em cada uma das imagens que representa as cores do semáforo, deve aparecer, abaixo do semáforo, uma dessas frases: 
+*  * Letra branca e fundo vermelho: Pare! Aguarde o verde! 
+*  * Letra preta e fundo laranja: Só siga se estiver perto e rápido. 
+*  * Letra branca e fundo verde: Siga -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="background-color: black; width: 280px; height: 740px; text-align: center;">
+        <img style="width: 250px;" onclick="vermelho()" src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Circulo_vermelho.png">
+        <img style="width: 220px;" onclick="amarelo()" src="https://www.publicdomainpictures.net/pictures/310000/velka/yellow-circle.png">
+        <img style="width: 250px;" onclick="verde()" src="https://upload.wikimedia.org/wikipedia/commons/2/27/Circulo_verde.png">
+    </div><br>
+    <span id="txt"></span>
+    
+</body>
+</html>
+
+<script>
+    function vermelho(){
+        txt.innerHTML = `<span style="background-color: red; color: white;"> Pare! Aguarde o verde! </span>`
+    }
+
+    function amarelo(){
+        txt.innerHTML = `<span style="background-color: orange;"> Só siga se estiver perto e rápido. </span>`
+    }
+
+    function verde(){
+        txt.innerHTML = `<span style="background-color: green; color: white;"> Siga em frente, olhe para o lado </span>`
+    }
+</script>

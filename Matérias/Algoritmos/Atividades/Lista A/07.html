@@ -1,0 +1,28 @@
+<!-- *  Crie um programa em HTML/JS o qual: 
+* a) Tenha um botão "Boas-vindas no alerta". Ao clicar nele, aparece um alert na página com alguma mensagem de boas vindas 
+* b) Tenha um botão "Boas-vindas na página". Ao clicar nele, aparece na própria página, abaixo dos botões alguma mensagem de boas vindas -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="alerta()">Boas vindas no alerta</button><br>
+    <button onclick="pagina()">Boas vindas na página</button><br>
+    <p id="txt"></p>
+</body>
+</html>
+
+<script>
+    function alerta(){
+        alert("Boas vindas!")
+    }
+
+    function pagina(){
+        txt.innerHTML = "Boas vindas!"
+    }
+</script>

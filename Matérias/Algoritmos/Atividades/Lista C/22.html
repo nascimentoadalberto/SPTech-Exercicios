@@ -1,0 +1,105 @@
+<!-- * Crie um programa em HTML/JS que vá auxiliar os motoboys a organizarem suas agendas de entregas.
+* a) Tenha quatro campos para entrada de dados, sendo eles: Entregas para ZS, Entregas para ZN, Entregas para ZL e Entregas para ZO.
+* b) Abaixo dos campos, um botão "Carregar agenda".
+* c) Assim que o botão for clicado, os campos de dados devem "desaparecer", assim como o próprio botão e as seguintes frases devem aparecer:
+?    Entregas ZL: X
+?    Entregas ZS: Y
+?    Entregas ZN: Z
+?    Entregas ZO: W
+?    Entregas restantes: T
+* Onde os valores de X, Y, Z, e W são os valores que ele digitou nos campos anteriormente e o valor de T deve ser o totalizador desses campos. 
+* d) Assim que os campos de dados desaparecerem e a agenda das entregas for carregada, devem aparecer outros quatro botões, sendo eles:
+?    Entregar ZL
+?    Entregar ZS
+?    Entregar ZN
+?    Entregar ZO
+* Conforme um desses botões é clicado, desconta 01 do total de entregas e 01 da entrega correspondente ao botão clicado, por exemplo:
+?    Entregas ZL: 10 -> O usuário clica no botão "Entrega ZL" -> Entregas ZL: 09, e assim por diante. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content">
+        Digite a quantidade de entregas na Zona Norte: <input type="text" id="ZN"><br>
+        Digite a quantidade de entregas na Zona Sul: <input type="text" id="ZS"><br>
+        Digite a quantidade de entregas na Zona Leste: <input type="text" id="ZL"><br>
+        Digite a quantidade de entregas na Zona Oeste: <input type="text" id="ZO"><br>
+        <button onclick="agendamento()">Carregar Agenda</button><br>
+    </div>
+
+    <br><div id="txt"></div><br>
+
+    <div id="buttons">
+        <button id="zn" style="display: none;" onclick="zonanorte()">Entregar ZN</button>
+        <button id="zs" style="display: none;" onclick="zonasul()">Entregar ZS</button>
+        <button id="zl" style="display: none;" onclick="zonaleste()">Entregar ZL</button>
+        <button id="zo" style="display: none;" onclick="zonaoeste()">Entregar ZO</button>
+    </div><br>
+
+    <br><div id="txt2"></div>
+    
+</body>
+</html>
+
+<script>
+    var norte = 0;
+    var sul = 0;
+    var leste = 0;
+    var oeste = 0;
+    var totalentregas = 0;
+
+    function agendamento(){
+        norte = Number(ZN.value);
+        sul = Number(ZS.value);
+        leste = Number(ZL.value);
+        oeste = Number(ZO.value);
+        totalentregas = norte + sul + leste + oeste;
+
+        content.style.display = "none";
+        buttons.style.display = "block";
+        zn.style.display = "block";
+        zs.style.display = "block";
+        zl.style.display = "block";
+        zo.style.display = "block";
+
+        txt.innerHTML = `<span id="retorno_zn">Entregas ZN: ${norte}</span><br>
+                        <span id="retorno_zs">Entregas ZS: ${sul}</span><br>
+                        <span id="retorno_zl">Entregas ZL: ${leste}</span><br>
+                        <span id="retorno_zo">Entregas ZO: ${oeste}</span><br>
+                        <span id="retorno_total">Entregas restantes: ${totalentregas}</span><br>`
+    }
+
+    function zonanorte(){
+        norte = norte - 1;
+        totalentregas = totalentregas - 1;
+        retorno_zn.innerHTML = `Entregas ZN: ${norte}`
+        retorno_total.innerHTML = `Entregas restantes: ${totalentregas}`
+    }
+
+    function zonasul(){
+        sul = sul - 1;
+        totalentregas = totalentregas - 1;
+        retorno_zs.innerHTML = `Entregas ZS: ${sul}`
+        retorno_total.innerHTML = `Entregas restantes: ${totalentregas}`
+    }
+
+    function zonaleste(){
+        leste = leste - 1;
+        totalentregas = totalentregas - 1;
+        retorno_zl.innerHTML = `Entregas ZL: ${leste}`
+        retorno_total.innerHTML = `Entregas restantes: ${totalentregas}`
+    }
+
+    function zonaoeste(){
+        oeste = oeste - 1;
+        totalentregas = totalentregas - 1;
+        retorno_zo.innerHTML = `Entregas ZO: ${oeste}`
+        retorno_total.innerHTML = `Entregas restantes: ${totalentregas}`
+    }
+</script>

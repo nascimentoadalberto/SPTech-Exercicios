@@ -1,0 +1,41 @@
+<!-- * Refaça a questão anterior de tal forma que: 
+* a) logo de início, apareça, acima dos botões a foto de um guerreiro Sayajin na forma normal (100px de altura): 
+* b) Ao clicar nos botões de transformação, mudar a imagem de cima conforme orientado no Moodle: 
+* c) Ao clicar no botão de voltar para forma base, volta a imagem do item a)  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="image"><img style="height: 100px;" src="https://pbs.twimg.com/profile_images/1366466342354751491/JyhZpbtu_400x400.jpg"><br></div>
+    Ki base do Saiyajin: 2000 <br>
+    <button onclick="ssj1()">Transformar em SSJ</button><br>
+    <button onclick="ssj2()">Transformar em SSJ2</button><br>
+    <button onclick="ssj3()">Transformar em SSJ3</button><br>
+    <button onclick="forma_base()">Voltar para a forma base</button><br>
+    <span id="txt"></span>
+</body>
+</html>
+
+<script>
+    function ssj1() {
+        image.innerHTML = `<img style="height: 100px;" src="https://i.pinimg.com/736x/05/c9/ef/05c9efba9a18c62ab8a38fce446a0063.jpg"><br>`
+    }
+
+    function ssj2(){
+        image.innerHTML = `<img style="height: 100px;" src="https://pbs.twimg.com/media/Eo54sGtXYAAOgbk.jpg"><br>`
+    }
+
+    function ssj3(){
+        image.innerHTML = `<img style="height: 100px;" src="https://dicasgeeks.com.br/wp-content/uploads/2021/05/poderes-goku-ataque-dragon-fist.jpg"><br>`
+    }
+
+    function forma_base(){
+        image.innerHTML = `<img style="height: 100px;" src="https://pbs.twimg.com/profile_images/1366466342354751491/JyhZpbtu_400x400.jpg"><br>`
+    }
+</script>

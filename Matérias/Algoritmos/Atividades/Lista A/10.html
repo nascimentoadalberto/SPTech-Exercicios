@@ -1,0 +1,35 @@
+<!-- * Refaça o programa da questão anterior de tal forma que cada mensagem tenha cores de fundo e letra diferentes: 
+* a) Mensagem do 1º botão: com cor de fundo vermelha e letra branca 
+* b) Mensagem do 2º botão: com cor de fundo preta e letra amarela 
+* c) Mensagem do 3º botão: com cor de fundo branca e letra verde 
+* OBS: Não pode aparecer mais de uma mensagem ao mesmo tempo. Sempre só uma mensagem por vez.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="pare()">Pare</button><br>
+    <button onclick="pense()">Pense</button><br>
+    <button onclick="siga()">Siga</button><br>
+    <span id="txt"></span>
+</body>
+</html>
+
+<script>
+    function pare(){
+        txt.innerHTML = `<span style="color: white; background-color: darkred;">Pare e aguarde!</span>`
+    }
+
+    function pense(){
+        txt.innerHTML = `<span style="color: goldenrod; background-color: black;">Pense se pode seguir ou se deve parar!</span>`
+    }
+
+    function siga(){
+        txt.innerHTML = `<span style="color: green; background-color: whitesmoke;">Pode seguir adiante.</span>`
+    }
+</script>

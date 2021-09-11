@@ -1,0 +1,48 @@
+<!-- * Na franquia de animes "Dragon Ball Z" existe uma raça chamada Sayajins. Um Sayajin pode ser transformar, aumentando seu ki (poder de luta), da seguinte forma: 
+* Forma Base: ki base 
+* Forma SSJ: ki base x 50 
+* Forma SSJ2: ki base x 100 
+* Forma SSJ3: ki base x 200 
+* Crie um programa em HTML/JS que: 
+* a) Tenha um texto dizendo "ki base do Guerreiro Sayajin: 2000". 
+* b) Tenha um botão "Transformar em SSJ". Ao clicar nele, aparece o texto "ki na forma SSJ: 100000" na cor azul escura abaixo. 
+* c) Tenha um botão "Transformar em SSJ2". Ao clicar nele, aparece o texto "ki na forma SSJ: 200000" na cor amarela e fundo azul abaixo. 
+* d) Tenha um botão "Transformar em SSJ3". Ao clicar nele, aparece o texto "ki na forma SSJ3: 400000" na cor laranja e fundo amarelo abaixo. 
+* e) Tenha um botão "Voltar para a forma Base". Ao clicar nele, qualquer texto que esteja abaixo dos botões deve sumir (é como te tivesse dado F5 na página). 
+* OBS: Não deve aparecer mais de um texto por vez (itens b), c) e d)) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Ki base do Saiyajin: 2000 <br>
+    <button onclick="ssj1()">Transformar em SSJ</button><br>
+    <button onclick="ssj2()">Transformar em SSJ2</button><br>
+    <button onclick="ssj3()">Transformar em SSJ3</button><br>
+    <button onclick="forma_base()">Voltar para a forma base</button><br>
+    <span id="txt"></span>
+</body>
+</html>
+
+<script>
+    function ssj1() {
+        txt.innerHTML = 100000
+    }
+
+    function ssj2(){
+        txt.innerHTML = 200000
+    }
+
+    function ssj3(){
+        txt.innerHTML = 400000
+    }
+
+    function forma_base(){
+        txt.innerHTML = ""
+    }
+</script>

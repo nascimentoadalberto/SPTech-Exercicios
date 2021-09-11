@@ -1,0 +1,48 @@
+<!-- * Refaça a questão anterior de tal forma que a frase final - a do item e) - apareça acompanhada de uma foto de 
+*    Sayajin na forma escolhida. A foto pode ficar antes ou depois ou abaixo da frase, tanto faz. As fotos estão no Moodle. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite o ki base do Saiyajin: <input type="text" id="base"><br>
+    <button onclick="ssj1()">Super Saiyajin</button>
+    <button onclick="ssj2()">Super Saiyajin 2</button>
+    <button onclick="ssj3()">Super Saiyajin 3</button><br>
+
+    <br><img id="imagem" style="width: 300px;" src="https://cdn.gamer-network.net/2018/articles/2018-07-24-14-22/heres-our-first-look-at-base-goku-gameplay-in-dragon-ball-fighterz-1532438548461.jpg/EG11/thumbnail/1920x1073/format/jpg/quality/80">
+    <br><div id="txt"></div>
+    
+</body>
+</html>
+
+<script>
+    function ssj1(){
+        let forca = Number(base.value) * 50;
+
+        imagem.style.display = "none";
+        txt.innerHTML = `Após se transformar em Super Saiyajin, o ki desse Saiyajin passa a ser de <b>${forca}</b>.<br>
+                        <img style="width: 300px;" src="https://i.redd.it/9zci2v2ykdy41.jpg">`
+    }
+
+    function ssj2(){
+        let forca = Number(base.value) * 100;
+
+        imagem.style.display = "none";
+        txt.innerHTML = `Após se transformar em Super Saiyajin 2, o ki desse Saiyajin passa a ser de <b>${forca}</b>.<br>
+                        <img style="width: 300px;" src="https://static.wikia.nocookie.net/dragonball/images/0/02/SS211.jpg/revision/latest/scale-to-width-down/1366?cb=20160712220003">`
+    }
+
+    function ssj3(){
+        let forca = Number(base.value) * 200;
+
+        imagem.style.display = "none";
+        txt.innerHTML = `Após se transformar em Super Saiyajin 3, o ki desse Saiyajin passa a ser de <b>${forca}</b>.<br>
+                        <img style="width: 300px;" src="https://images3.alphacoders.com/651/651889.png">`
+    }
+</script>

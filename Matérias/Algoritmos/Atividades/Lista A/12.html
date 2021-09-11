@@ -1,0 +1,36 @@
+<!-- * Refaça o programa da questão anterior de tal forma que: 
+* a) A frase de gol do Brasil apareça na cor verde 
+* b) A frase de gol da Alemanha apareça com cor de fundo vermelho escuro e letra amarela  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Brasil x Alemanha</h3><br>
+    <button onclick="brasil()">Gol do Brasil</button>
+    <button onclick="alemanha()">Gol da Alemanha</button>
+    <button onclick="falta()">Falta!</button>
+    <br><h4>Tempo real do jogo:</h4>
+    <div id="txt"></div>
+    
+</body>
+</html>
+
+<script>
+    function brasil(){
+        txt.innerHTML += `<span style="background-color: yellow; color: green;">Gol do Brasil!!!!!</span><br><br>`
+    }
+
+    function alemanha(){
+        txt.innerHTML += `<span style="background-color: darkred; color: yellow;">Gol da Alemanha!!!!!</span><br><br>`
+    }
+
+    function falta(){
+        txt.innerHTML += "É falta no Neymar! Pode isso Arnaldo?<br><br>"
+    }
+</script>

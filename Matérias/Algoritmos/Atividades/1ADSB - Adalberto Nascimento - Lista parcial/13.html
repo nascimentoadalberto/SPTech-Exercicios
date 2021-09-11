@@ -1,0 +1,41 @@
+<!-- * Refaça o programa da questão anterior de tal forma que: 
+* a) Exista um terceiro botão, ao lado dos anteriores, o "Recomeçar partida" 
+* b) Ao clicar no novo botão, todos os textos de "gol..." somem da página (os demais itens, que já estão na página desde o início, não somem) -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Brasil x Alemanha</h3><br>
+    <button onclick="brasil()">Gol do Brasil</button>
+    <button onclick="alemanha()">Gol da Alemanha</button>
+    <button onclick="falta()">Falta!</button>
+    <button onclick="clean()">Recomeçar partida</button>
+    <br><h4>Tempo real do jogo:</h4>
+    <div id="txt"></div>
+    
+</body>
+</html>
+
+<script>
+    function brasil(){
+        txt.innerHTML += `<span style="background-color: yellow; color: green;">Gol do Brasil!!!!!</span><br><br>`
+    }
+
+    function alemanha(){
+        txt.innerHTML += `<span style="background-color: darkred; color: yellow;">Gol da Alemanha!!!!!</span><br><br>`
+    }
+
+    function falta(){
+        txt.innerHTML += "É falta no Neymar! Pode isso Arnaldo?<br><br>"
+    }
+
+    function clean(){
+        txt.innerHTML = " "
+    }
+</script>

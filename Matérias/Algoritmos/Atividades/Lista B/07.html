@@ -1,0 +1,49 @@
+<!-- * Crie um programa em HTML/JS o qual calcula e mostra de forma gráfica a frequência de um aluno num curso da seguinte forma:
+*      a) Solicite o nome do aluno
+*      b) Solicite a quantidade de aulas totais do curso
+*      c) Solicite a quantidade de aulas que o aluno faltou
+*      d) Ao clicar em "Calcular Frequência", calcule e exiba a frequência em forma de porcentagem conforme o exemplo a seguir:
+?         Olá, NOME! Sua frequência foi de 90%
+*         O texto deve estar na cor azul, menos a porcentagem, que deve estar na cor verde e negrito. No exemplo, o total de aulas 
+*      foi 10 e o aluno faltou 1 aula (use esse exemplo para descobrir que cálculo fazer).
+*      e) Abaixo da frase em d) deve aparecer uma barra de cor vermelho escuro e uns 20px de altura. Sua largura ocupa uma determinada 
+*      porcentagem da página, conforme a porcentagem de sua frequência (ex: se o aluno tiver 50% de frequência, a barra deve ter 50% 
+*      da página de largura).
+todo   #ficadica: para alterar a largura de um elemento via JS, basta pegar seu id e depois .style.width -->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite seu nome: <input type="text" id="nome"><br>
+    Digite a quantidade de aulas totais do curso: <input type="text" id="aulas_totais"><br>
+    Digite a quantidade de faltas: <input type="text" id="faltas_totais"><br>
+    <button onclick="calc()">Calcular Frequência</button><br>
+
+    <div id="txt"></div><br>
+
+    <div id="barras" style="width: 500px; height: 30px; display: none;">
+        <div id="barra_vermelha" style="height: 29px; background-color: red; color: white; float: left;"></div>
+        <div id="barra_verde" style="height: 29px; background-color: green; color: white; float: left;"></div>
+    </div>
+</body>
+</html>
+
+<script>
+    function calc(){
+        let frequencia = ((Number(faltas_totais.value) / Number(aulas_totais.value)) * 100).toFixed(2);
+        let presenca = 100 - frequencia;
+
+        txt.innerHTML = `<span style="color:blue">Olá ${nome.value}, sua frequência foi de <b style="color: green">${100 - frequencia}%</b>.</span>`
+
+        barras.style.display = "block";
+        barra_vermelha.style.width = frequencia + "%";
+        barra_verde.style.width = presenca + "%";
+    }
+</script>

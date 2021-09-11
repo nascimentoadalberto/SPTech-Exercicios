@@ -1,0 +1,49 @@
+<!-- * Melhore o programa da questão anterior de tal forma que:
+* a) Abaixo da frase do valor guardado tenha as seguintes frases:
+?    Quantidade de depósitos feitos: 0
+?    Quantidade de retiradas feitas: 0
+* b) Sempre que for clicado no botão "Depositar", o valor de "depósitos feitos" aumenta em 1
+* c) Sempre que for clicado no botão "Tirar toda a grana", o valor de "retiradas feitas" aumenta em 1 -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Valor guardado no cofrinho: R$ <span id="valor">0</span>.00<br>
+        Digite o valor a ser depositado: <input type="text" id="deposito"><br>
+        <button onclick="depositar()">Depositar</button><br>
+        <button onclick="esvaziar()">Secar a carteira</button><br>
+
+        <br>Depósitos feitos: <span id="quant_deposito"></span><br>
+        <br>Retiradas feitas: <span id="quant_retirada"></span><br>
+    </div>
+</body>
+</html>
+
+<script>
+    var saldo = 0;
+    var depositos = 0;
+    var retiradas = 0;
+
+    function depositar(){
+        var soma = saldo + Number(deposito.value);
+        valor.innerHTML = soma;
+        saldo = soma;
+        depositos++;
+        quant_deposito.innerHTML = depositos;
+    }
+
+    function esvaziar(){
+        saldo = 0;
+        valor.innerHTML = saldo;
+        deposito.value = 0;
+        retiradas++;
+        quant_retirada.innerHTML = retiradas;
+    }
+</script>

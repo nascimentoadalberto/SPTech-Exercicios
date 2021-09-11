@@ -1,0 +1,31 @@
+<!-- * Crie um programa em HTML/JS o qual:
+*      a) Solicite a quantidade de filhos que uma pessoa tem
+*      b) Ao clicar no botão "Calcular Auxílio Filhos", calcular e exibir o "Auxílio Filhos" que essa pessoa terá direito
+*      c) O cálculo que deve ser usado é este: R$25,00 por filho
+*      d) A frase que deve aparecer abaixo do botão para mostrar o valor do auxílio é como esta:
+?         Você tem X filhos, logo, seu "Auxílio Filhos" será de R$Y -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite a quantidade de filhos: <input type="text" id="filhos"><br>
+    <button onclick="calc()">Calcular Auxílio</button><br>
+
+    <br><div id="txt"></div>
+</body>
+</html>
+
+<script>
+    function calc(){
+        var filiacao = Number(filhos.value);
+        var aux = filiacao * 25
+
+        txt.innerHTML = `Você tem ${filiacao} filhos, logo, seu "Auxílio Filhos" será de R$${aux}`
+    }
+</script>

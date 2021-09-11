@@ -1,0 +1,30 @@
+<!-- * Crie um programa em HTML/JS o qual:
+*      a) Solicite 2 notas ao usuário
+*      b) Ao clicar num botão "Calcular média", calcule sua média e exiba, na página a frase:
+?          Sua média foi de X -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite a primeira nota: <input type="text" id="primeira_nota"><br>
+    Digite a segunda nota: <input type="text" id="segunda_nota"><br>
+    <button onclick="calc()">Calcular média</button><br>
+
+    <br><div id="txt"></div>
+</body>
+</html>
+
+<script>
+    function calc(){
+        let media = (Number(primeira_nota.value) + Number(segunda_nota.value)) / 2
+
+        txt.innerHTML = `Sua média foi de ${media}`
+    }
+</script>

@@ -1,0 +1,60 @@
+<!-- * Crie um programa em HTML/JS que simule um jogo de luta simples.
+* a) Nada deve aparecer na tela, a princípio, a não ser um botão "Iniciar Jogo". Ao clicar nele, aparecem os itens a seguir...
+* b) Aparecem as fotos de 2 lutadores (como as dos exemplos abaixo). E, abaixo deles, uma "barra de vida", que ocupa 100% da largura da tela.
+* c) Abaixo das imagens e barras, deve haver o texto:
+?    Golpes sofridos pelo lutador 1: 0
+?    Golpes sofridos pelo lutador 2: 0
+* d) Sempre que for clicada na imagem um dos lutadores, seu "contador" aumenta em 1 e sua barra reduz em 5% bruto (não relativo). Ex: estava em 90%, vai para 85%. Estava em 75%, vai para 70%.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="start()">Iniciar Jogo</button>
+    <div id="content" style="display: none;">
+        <img onclick="zoro()" style="width: 650px;" src="https://kanto.legiaodosherois.com.br/w760-h398-gnw-cfill-q80/wp-content/uploads/2021/04/legiao_NKrQjeyAoO5I.jpg.jpeg" alt="ZORO SOLA">
+        <img onclick="mihawk()"style="width: 650px;" src="https://criticalhits.com.br/wp-content/uploads/2020/10/dracule-mihawk-one-piece-papel-de-parede-2560x1440-35219_51.jpg" alt="Mihawk brabo d+">
+
+        <div id="barras" style="width: 100%; height: 41px; display: flex;">
+            <div id="zoro_vida" style="background-color: green; height: 40px; width: 50%;"></div>
+            <div style="width: 1%; height: 40px;"></div>
+            <div id="mihawk_vida" style="background-color: green; height: 40px; width: 50%;"></div>
+        </div><br>
+
+        <br><div id="golpes">
+            Golpes sofridos pelo Zoro: <b id="golpes_zoro">0</b><br>
+            Golpes sofridos pelo Mihawk: <b id="golpes_mihawk">0</b>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    var zoro_golpes = 0;
+    var mihawk_golpes = 0;
+    var barra_zoro = 50;
+    var barra_mihawk = 50;
+
+    function start(){
+        content.style.display = "block";
+    }
+
+    function zoro(){
+        barra_zoro = barra_zoro - 5
+        zoro_golpes++;
+        golpes_zoro.innerHTML = zoro_golpes;
+        zoro_vida.style.width = barra_zoro + "%";
+    }
+
+    function mihawk(){
+        barra_mihawk = barra_mihawk - 5;
+        mihawk_golpes++;
+        golpes_mihawk.innerHTML = mihawk_golpes;
+        mihawk_vida.style.width = barra_mihawk + "%";
+    }
+</script>

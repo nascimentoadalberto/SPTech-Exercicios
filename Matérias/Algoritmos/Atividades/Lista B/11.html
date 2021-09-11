@@ -1,0 +1,47 @@
+<!-- * Crie um programa em HTML/JS que demonstre como o poder de guerreiros Sayajins da franquia de desenhos animados 
+*      Dragon Ball aumenta na medida em que se transformam:
+*      a) Solicite o "ki base" (força base) do guerreiro Sayajin
+*      b) Abaixo, deve haver o texto "Transformar em..."
+*      c) Abaixo, devem haver os botões "SSJ", "SSJ2", "SSJ3", lado a lado entre si
+*      d) Ao clicar num dos botões, é calculado o novo ki do Sayajin conforme a regra de cada transformação...
+?          SSJ: ki base x 50
+?          SSJ2: ki base x 100
+?          SSJ3: ki base x 200
+*      e) O valor do novo ki deve aparecer abaixo com uma frase como esta:
+?          Após se transformar em X, o ki desse Sayajin passa a ser de Y
+todo       Onde X é o nome da transformação (SSJ, SSJ2 ou SSJ3) e Y é o valor calculado em d) -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite o ki base do Saiyajin: <input type="text" id="base"><br>
+    <button onclick="ssj1()">Super Saiyajin</button>
+    <button onclick="ssj2()">Super Saiyajin 2</button>
+    <button onclick="ssj3()">Super Saiyajin 3</button><br>
+
+    <br><div id="txt"></div>
+</body>
+</html>
+
+<script>
+    function ssj1(){
+        let forca = Number(base.value) * 50;
+        txt.innerHTML = `Após se transformar em Super Saiyajin, o ki desse Saiyajin passa a ser de ${forca}.`
+    }
+
+    function ssj2(){
+        let forca = Number(base.value) * 100;
+        txt.innerHTML = `Após se transformar em Super Saiyajin 2, o ki desse Saiyajin passa a ser de ${forca}.`
+    }
+
+    function ssj3(){
+        let forca = Number(base.value) * 200;
+        txt.innerHTML = `Após se transformar em Super Saiyajin 3, o ki desse Saiyajin passa a ser de ${forca}.`
+    }
+</script>

@@ -1,0 +1,26 @@
+<!-- * Refaça o programa da questão 7 de tal forma que a mensagem do item b) apareça com uma cor de fundo preta e cor de letra amarela.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="alerta()">Boas vindas no alerta</button><br>
+    <button onclick="pagina()">Boas vindas na página</button><br>
+    <span id="txt" style="color: yellow; background-color: black;"></span>
+</body>
+</html>
+
+<script>
+    function alerta(){
+        alert("Boas vindas!")
+    }
+
+    function pagina(){
+        txt.innerHTML = "Boas vindas!"
+    }
+</script>

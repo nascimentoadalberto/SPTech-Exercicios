@@ -1,0 +1,32 @@
+<!-- * Crie um programa em HTML/JS o qual:
+*      a) Solicite o valor da passagem de ônibus
+*      b) Solicite a quantidade de viagens que o usuário faz por mês
+*      c) Ao clicar em "Calcular VT" calcule e exiba na tela quanto o usuário gastará por mês com passagens como uma frase como esta
+?          Você vai gastar R$X por mês com ônibus
+*      Note que o valor é precedido de R$ e está sublinhado -->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite o valor da passagem: <input type="text" id="valor"><br>
+    Digite a quantidade de viagens mensais: <input type="text" id="viagens"><br>
+    <button onclick="calc()">Calcular VT</button><br>
+
+    <div id="txt"></div>
+</body>
+</html>
+
+<script>
+    function calc(){
+        let total = Number(valor.value) * Number(viagens.value);
+
+        txt.innerHTML = `Você vai gastar <u>R$${total}</u> por mês com ônibus`
+    }
+</script>

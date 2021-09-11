@@ -1,0 +1,46 @@
+<!-- * Selecione na internet quatro imagens, uma para cada estação do ano (primavera, verão, outono e inverno). 
+*      Faça um programa em HTML/JS que tenha uma COMBO BOX com as opções das estações do ano, sendo que ao selecionar uma estação deve aparecer na tela a imagem da opção selecionada com 200px de largura.
+?      #ficaadica você pode na tag script mudar o src de uma imagem. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content">
+        <select onchange="troca()" id="imagens">
+            <option value="null">Selecione uma estação</option>
+            <option value="primavera">Primavera</option>
+            <option value="verao">Verão</option>
+            <option value="outono">Outono</option>
+            <option value="inverno">Inverno</option>
+        </select><br>
+
+        <div id="txt">
+            <img src="" id="imagem" style="width: 200px;">
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function troca(){
+        if (imagens.value == "primavera") {
+            imagem.src = "https://static.mundoeducacao.uol.com.br/mundoeducacao/2019/08/primavera.jpg";
+        } else if (imagens.value == "verao") {
+            imagem.src = "https://s.calendarr.com/upload/datas/ve/ra/verao_c.jpg";
+        } else if (imagens.value == "outono") {
+            imagem.src = "https://www.lopes.com.br/blog/wp-content/uploads/2017/03/capa.jpg";
+        } else if (imagens.value == "inverno") {
+            imagem.src = "https://eurodicas.com.br/wp-content/uploads/2021/04/inverno-na-europa-1.jpg"
+        } else {
+            imagem.src = "";
+        }
+    }
+</script>
+
+<!-- Adendo: eu tive um pouquinho de dificuldade para realizar essa atividade em específico, por isso fiz duas, uma delas usando if/else. -->

@@ -1,0 +1,95 @@
+<!-- ? DESAFIO
+* Alguns clubes de futebol de São Paulo já conquistaram o mundial de clubes da FIFA. Dentre os grandes, o Palmeiras luta para que o troféu "Cachaça 51" 
+* seja considerado como tal, mas, até agora, a FIFA não o considera. Crie um programa em HTML/JS o qual: 
+* a) Tenha os escudos dos 4 grandes clubes de futebol de São Paulo, lado a lado (não pode ser usada a tag <button>, apenas <img>) 
+* b) Ao clicar no escudo de um deles, aparecem N taças de mundial da FIFA, lado a lado, conforme a quantidade que o clube tem (Corinthians: 2, Santos: 2, São Paulo: 3). Cada taça deve ter apenas 100px de altura. 
+* A imagem da taça está no Moodle.
+* c) Caso o clube não tenha mundial, exiba a imagem abaixo, com 200px de altura.
+* d) Ao lado das imagens dos escudos dos times, deve haver um botão "Resetar programa". Ao clicar nele, todas as imagens de troféu que eventualmente estiverem na tela, devem sumir 
+* e) Ao lado do botão do item d) deve haver outro botão, o "Esconder escudos". Ao clicar nele, todos os escudos dos clubes somem, bem como o próprio botão "Esconder escudos". 
+* E aparece um outro botão, o "Mostrar escudos". Ao clicar nele, ele mesmo some e os escudos e o botão "Esconder escudos" reaparece. 
+? DESAFIO -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .imagem {
+            width: 250px;
+            margin-left: 50px;
+            margin-bottom: 50px;
+        }
+
+        .imagem_taca {
+            width: 100px;
+        }
+
+        .imagem_sem_mundial {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        Clique no escudo para ver a quantidade de Mundiais: <br>
+
+        <img class="imagem" onclick="sp()" src="https://1.bp.blogspot.com/-8s9tfbxMD9Q/W_buy9RTiRI/AAAAAAABf0w/WY7ag39vJI8qNTjYGklSvAwNX-nTimFZgCLcBGAs/s1600/S%25C3%25A3o%2BPaulo-SP.png">
+        <img class="imagem" onclick="cor()" src="https://i1.wp.com/dreamleaguesoccer.com.br/wp-content/uploads/2016/11/escudo-Corinthians.png?resize=512%2C512&ssl=1">
+        <img class="imagem" onclick="palm()" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Palmeiras_logo.svg/1200px-Palmeiras_logo.svg.png">
+        <img class="imagem" onclick="santos()" src="https://upload.wikimedia.org/wikipedia/commons/3/35/Santos_logo.svg"><br>
+
+        <button onclick="reset()">Resetar programa</button>
+        <button onclick="esconder()">Esconder escudos</button>
+
+        <div id="txt"></div>
+    </div>
+
+    <button id="botao_mostrar" style="display: none;" onclick="mostrar()">Mostrar escudos</button>
+</body>
+</html>
+
+<script>
+    function sp(){
+        txt.innerHTML = `O clube São Paulo tem três taças (os caras são brabo) <br>
+            <img class="imagem_taca" src="../assets/img_taca.jpg">
+            <img class="imagem_taca" src="../assets/img_taca.jpg">
+            <img class="imagem_taca" src="../assets/img_taca.jpg">`
+    }
+
+    function cor(){
+        txt.innerHTML = `O clube Corinthians tem duas taças (voa timão) <br>
+            <img class="imagem_taca" src="../assets/img_taca.jpg">
+            <img class="imagem_taca" src="../assets/img_taca.jpg">`
+    }
+
+    function palm(){
+        txt.innerHTML = `KKKKKKKKKKKK OS CARAS N TÊM MUNDIAL <br>
+        <img class="imagem_sem_mundial" src="../assets/sem_mundial.jpg">`
+    }
+
+    function santos(){
+        txt.innerHTML = `O clube Santos tem duas taças. (peixão brabo d+) <br>
+            <img class="imagem_taca" src="../assets/img_taca.jpg">
+            <img class="imagem_taca" src="../assets/img_taca.jpg">`
+    }
+
+    function reset(){
+        txt.innerHTML = ""
+    }
+
+    function esconder(){
+        content.style.display = 'none';
+        botao_mostrar.style.display = 'block';
+    }
+
+    function mostrar(){
+        content.style.display = 'block';
+        botao_mostrar.style.display = 'none';
+        txt.innerHTML = ""
+    }
+</script>

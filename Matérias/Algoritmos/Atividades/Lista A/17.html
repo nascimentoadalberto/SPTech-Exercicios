@@ -1,0 +1,45 @@
+<!-- * Crie um programa em HTML/JS a qual: 
+* a) Tenha um título grande no inicio "A história de uma pizza" 
+* b) Tenha os botões "Acabou de chegar", "Depois de 1 minuto", "Depois de 5 minutos" e "Depois de 15 minutos" 
+* c) Ao clicar no 1º botão, aparece, abaixo dos botões, a foto de uma pizza inteira 
+* d) Ao clicar no 2º botão, aparece, abaixo dos botões, a foto de uma pizza inteira com uma ou duas fatias tiradas 
+* e) Ao clicar no 3º botão, aparece, abaixo dos botões, a foto de uma pizza pela metade 
+* f) Ao clicar no 4º botão, aparece, abaixo dos botões, a foto de um prato vazio (ou com restos de uma pizza, se achar uma imagem assim) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>A história de uma pizza</h2><br>
+
+    <button onclick="chegou()">Acabou de chegar</button>
+    <button onclick="umMin()">Depois de 1 minuto</button>
+    <button onclick="cinco()">Depois de 5 minutos</button>
+    <button onclick="quinze()">Depois de 15 minutos</button><br>
+
+    <div id="txt"></div>
+</body>
+</html>
+
+<script>
+    function chegou(){
+        txt.innerHTML = `<img style="width: 200px;" src="https://versatille.com/wp-content/uploads/aurelien-lemasson-theobald-CzBt4Dfk-unsplash.jpg">`
+    }
+
+    function umMin(){
+        txt.innerHTML = `<img style="width: 200px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrrjt5lzZPB6HUXUgb4_mcSF2_vYODUOM-fw&usqp=CAU">`
+    }
+
+    function cinco(){
+        txt.innerHTML = `<img style="width: 200px;" src="https://c.ndtvimg.com/2021-02/bj6olj1o_pizza_625x300_20_February_21.jpg?im=FeatureCrop,algorithm=cascade,width=1200,height=675">`
+    }
+
+    function quinze(){
+        txt.innerHTML = `<img style="width: 200px;" src="https://thumbs.dreamstime.com/b/prato-usado-sujo-32557252.jpg">`
+    }
+</script>

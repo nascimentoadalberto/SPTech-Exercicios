@@ -1,0 +1,24 @@
+<!-- * Refaça a questão anterior de tal forma que a frase apareça com o nome da cidade em negrito e o ano de nascimento sublinhado. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Cidade Natal: <input type="text" id="cidade" placeholder="Sua cidade"><br>
+    Ano de Nascimento: <input type="text" id="ano" placeholder="Ano"><br>
+    <button onclick="cadastrar()">Cadastrar</button><br>
+
+    <div id="txt"></div>
+</body>
+</html>
+
+<script>
+    function cadastrar(){
+        txt.innerHTML = `Você nasceu na cidade de <b>${cidade.value}</b> em <u>${ano.value}</u>`
+    }
+</script>

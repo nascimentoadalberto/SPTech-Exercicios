@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Selecione a matéria: 
+    <select id="materias">
+        <option value="null">Selecione a matéria</option>
+        <option value="Algoritmos">Algoritmos</option>
+        <option value="Arquitetura Computacional">Arquitetura Computacional</option>
+        <option value="Banco de Dados">Banco de Dados</option>
+        <option value="Desenvolvimento Socioemocional">Desenvolvimento Socioemocional</option>
+        <option value="Pesquisa e Inovação">Pesquisa e Inovação</option>
+        <option value="Tecnologia da Informação">Tecnologia da Informação</option>
+    </select><br>
+
+    Digite as duas notas: <br>
+    Nota 1 <input type="text" id="nota1"><br>
+    Nota 2 <input type="text" id="nota2"><br>
+    Nota 3 <input type="text" id="nota3"><br>
+    <button onclick="calc()">Calcular média</button><br>
+
+    <br><div id="txt"></div>
+</body>
+</html>
+
+<script>
+    function calc(){
+        var media = ((Number(nota1.value) + Number(nota2.value) + Number(nota3.value)) / 3).toFixed(2);
+
+        if (materias.value == "null") {
+            txt.innerHTML = `Por favor, selecione uma matéria.`
+        } else {
+            if (media >= 7) {
+                txt.innerHTML = `Sua média em ${materias.value} é de: ${media}. Parabéns, continue assim!`
+            } else if (media == 0) {
+                txt.innerHTML = `Sua média em ${materias.value} é de: ${media}. Infelizmente, você não passou nesse semestre.`
+            } else {
+                txt.innerHTML = `Sua média em ${materias.value} é de: ${media}. Continue se esforçando!`
+            }
+            
+        }
+    }
+</script>
+
+<!-- Esse aqui é só um bônus, que eu usei em outro momento, sópra treinar condicionais e selects -->

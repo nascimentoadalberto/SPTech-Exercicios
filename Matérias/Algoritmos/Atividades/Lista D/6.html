@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content">
+        <select onchange="troca()" id="imagens">
+            <option value="">Selecione uma estação</option>
+            <option value="https://static.mundoeducacao.uol.com.br/mundoeducacao/2019/08/primavera.jpg">Primavera</option>
+            <option value="https://s.calendarr.com/upload/datas/ve/ra/verao_c.jpg">Verão</option>
+            <option value="https://www.lopes.com.br/blog/wp-content/uploads/2017/03/capa.jpg">Outono</option>
+            <option value="https://eurodicas.com.br/wp-content/uploads/2021/04/inverno-na-europa-1.jpg">Inverno</option>
+        </select><br>
+
+        <div id="txt">
+            <img src="" id="imagem" style="width: 200px;">
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function troca(){
+        imagem.src = `${imagens.value}`;
+    }
+</script>

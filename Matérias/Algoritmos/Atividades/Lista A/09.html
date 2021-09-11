@@ -1,0 +1,35 @@
+<!-- * Crie um programa em HTML/JS o qual: 
+* a) Tenha os botões "Pare", "Pense" e "Siga". 
+* b) Ao clicar no 1º, aparece na própria página, abaixo dos botões uma frase "Pare e aguarde!". 
+*    Ao clicar no 2º botão, a frase a aparecer, no mesmo lugar será "Pense se pode seguir ou se deve parar!". 
+*    Ao clicar no 3º botão, a frase a aparecer, no mesmo lugar será "Pode seguir adiante".  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="pare()">Pare</button><br>
+    <button onclick="pense()">Pense</button><br>
+    <button onclick="siga()">Siga</button><br>
+    <span id="txt"></span>
+</body>
+</html>
+
+<script>
+    function pare(){
+        txt.innerHTML = "Pare e aguarde!"
+    }
+
+    function pense(){
+        txt.innerHTML = "Pense se pode seguir ou se deve parar!"
+    }
+
+    function siga(){
+        txt.innerHTML = "Pode seguir adiante."
+    }
+</script>

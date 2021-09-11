@@ -1,0 +1,42 @@
+<!-- * Crie um programa em HTML/JS que ajude a calcular o tempo de cada fase do sono do ser humano.
+*      Sabendo que nosso sono possui fases como descreve a figura abaixo.
+*      Vamos considerar que as fases do sono possuem a porcentagens de tempo descritas na figura.
+*      a) Solicite ao usuário quantas horas de sono ele dormiu
+*      b) Ao clicar no botão "Calcular Sono", faça os cálculos necessários para exibir o seguinte conteúdo na tela:
+?           Ao dormir X horas, você dormiu:
+?           A horas na fase 1
+?           B horas na fase 2
+?           C horas na fase 3
+?           D horas na fase REM -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite a quantidade de horas que você dormiu: <input type="text" id="tempo_sono"><br>
+    <button onclick="calc()">Calcular sono</button><br>
+
+    <br><div id="txt"></div>
+</body>
+</html>
+
+<script>
+    function calc(){
+        var sono = Number(tempo_sono.value);
+        var fase1 = sono * 0.05;
+        var fase2 = sono * 0.45;
+        var fase3 = sono * 0.3;
+        var rem = sono * 0.2;
+
+        txt.innerHTML = `Ao dormir ${sono} horas, você dormiu:<br>
+                        ${fase1} horas na fase 1;<br>
+                        ${fase2} horas na fase 2;<br>
+                        ${fase3} horas na fase 3;<br>
+                        ${rem} horas na fase REM.`
+    }
+</script>

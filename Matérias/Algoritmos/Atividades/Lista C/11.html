@@ -1,0 +1,39 @@
+<!-- * Crie um programa em HTML/JS que simule um cofrinho da seguinte forma:
+* a) Tenha, logo de cara, a frase "Valor guardado no cofrinho: R$0.00"
+* b) Solicite o valor a ser depositado
+* c) Ao clicar num botão "Depositar", o valor informado em b) é adicionado ao valor exibido na frase descrita em a)
+* d) Ao clicar num botão "Tirar toda a grana", o valor exibido em a) volta a 0.00 -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Valor guardado no cofrinho: R$ <span id="valor">0</span>.00<br>
+        Digite o valor a ser depositado: <input type="text" id="deposito"><br>
+        <button onclick="depositar()">Depositar</button><br>
+        <button onclick="esvaziar()">Secar a carteira</button>
+    </div>
+</body>
+</html>
+
+<script>
+    var saldo = 0;
+
+    function depositar(){
+        var soma = saldo + Number(deposito.value);
+        valor.innerHTML = soma;
+        saldo = soma;
+    }
+
+    function esvaziar(){
+        saldo = 0;
+        valor.innerHTML = saldo;
+        deposito.value = 0;
+    }
+</script>

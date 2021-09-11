@@ -1,0 +1,32 @@
+<!-- * Crie um programa em HTML/JS a qual: 
+* a) Tenha os botões "Gente tímida" e "Gente que causa" 
+* b) Abaixo dos botões já deve aparecer a foto de uma pessoa com cara de confiante 
+* c) Ao clicar no primeiro botão, a foto some 
+* d) Ao clicar no segundo botão, a foto aparece  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="sumir()">Gente tímida</button>
+    <button onclick="aparecer()">Gente que causa</button><br>
+    <br><div id="image">
+        <img style="height: 200px;" src="https://www.einerd.com.br/wp-content/uploads/2020/06/Dragon-Ball-Super-Vegeta-capa.jpg">
+    </div>
+</body>
+</html>
+
+<script>
+    function sumir(){
+        image.style.display = "none";
+    }
+
+    function aparecer(){
+        image.style.display = "block";
+    }
+</script>

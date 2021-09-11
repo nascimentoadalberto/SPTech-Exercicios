@@ -1,0 +1,71 @@
+<!-- * (Desafio) Faça um programa em HTML/JS que simule um cofrinho.
+*      a) Tenha uma select box com os valores atuais de moeda.
+*      b) Abaixo tenha as frases:
+?           “O saldo do cofrinho é de: R$ 99,99”
+?           “A quantidade de operações foi: 99”
+?           “Média dos depósitos: R$ 99,99”
+*      c) Tenha um botão “Depositar” que ao clicar soma o valor da moeda no saldo do cofrinho e adiciona 1 a quantidade de operações.
+*      d) Tenha um botão “Gastar a Grana” que zera o valor do cofrinho, a quantidade de operações e a média dos depósitos.
+?           #ficaadica1 – Use variável global
+?           #ficaadica2 – Não esqueça o tratamento de números (incluindo casas decimais). -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content">
+        <select id="moeda">
+            <option value="0">Selecione um valor</option>
+            <option value="2">R$ 2,00</option>
+            <option value="5">R$ 5,00</option>
+            <option value="10">R$ 10,00</option>
+            <option value="20">R$ 20,00</option>
+            <option value="50">R$ 50,00</option>
+            <option value="100">R$ 100,00</option>
+            <option value="200">R$ 200,00</option>
+        </select><br>
+
+        <div id="txt">
+            O saldo do cofrinho é de: R$ <b id="saldo_total">0,00</b><br>
+            A quantidade de operações foi: <b id="contador_total">0</b><br>
+            Média dos depósitos: R$ <b id="media_depositos">0,00</b><br>
+        </div>
+
+        <div id="buttons">
+            <button onclick="depositar()">Fazer um depósito</button>
+            <button onclick="gastar()">Gastar tudo</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    var saldo = 0;
+    var contador = 0;
+    var deposito = 0;
+
+    function depositar(){
+        saldo = Number(moeda.value) + saldo;
+        contador++;
+        deposito = (deposito + saldo) / contador;
+
+        saldo_total.innerHTML = (saldo).toFixed(2);
+        contador_total.innerHTML = contador;
+        media_depositos.innerHTML = (deposito).toFixed(2);
+    }
+
+    function gastar(){
+        saldo = 0;
+        contador = 0;
+        deposito = 0;
+
+        saldo_total.innerHTML = saldo;
+        contador_total.innerHTML = contador;
+        media_depositos.innerHTML = deposito;
+    }
+</script>

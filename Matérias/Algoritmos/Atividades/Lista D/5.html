@@ -1,0 +1,45 @@
+<!-- * Faça um programa em HTML/JS que ensine a tabuada, tenha uma lista suspensa com as opções de 2 a 9 e ao selecionar uma das opções mostre na página a tabuada do número selecionado.
+?      #ficaadica use o atributo onchange -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content">
+        <select id="tabuada" onchange="calc()">
+            <option value="0">Selecione um número</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select><br>
+
+        <div id="txt"></div>
+    </div>
+</body>
+</html>
+
+<script>
+    function calc(){
+        var valor = Number(tabuada.value);
+
+        txt.innerHTML = `${valor} x 1 = ${valor * 1}<br>
+                        ${valor} x 2 = ${valor * 2}<br>
+                        ${valor} x 3 = ${valor * 3}<br>
+                        ${valor} x 4 = ${valor * 4}<br>
+                        ${valor} x 5 = ${valor * 5}<br>
+                        ${valor} x 6 = ${valor * 6}<br>
+                        ${valor} x 7 = ${valor * 7}<br>
+                        ${valor} x 8 = ${valor * 8}<br>
+                        ${valor} x 9 = ${valor * 9}<br>`
+    }
+</script>

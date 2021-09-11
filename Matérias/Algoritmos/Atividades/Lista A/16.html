@@ -1,0 +1,37 @@
+<!-- * Crie um programa em HTML/JS a qual: 
+* a) Tenha um título grande no inicio "O que faz um triatleta?" 
+* b) Tenha os botões "Nada", "Corre" e "Pedala" 
+* c) Ao clicar no 1º botão, aparece, abaixo dos botões, a foto de alguém nadando 
+* d) Ao clicar no 2º botão, aparece, abaixo dos botões, a foto de alguém correndo 
+* e) Ao clicar no 3º botão, aparece, abaixo dos botões, a foto de alguém pedalando  -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>O que faz um triatleta?</h2><br>
+    <button onclick="nada()">Nada</button>
+    <button onclick="corre()">Corre</button>
+    <button onclick="pedala()">Pedala</button><br><br>
+    <div id="txt"></div>
+</body>
+</html>
+
+<script>
+    function nada(){
+        txt.innerHTML = `<img style="width: 300px;" src="https://www.infomoney.com.br/wp-content/uploads/2021/07/Fernando-Scheffer.png?quality=70">`
+    }
+
+    function corre(){
+        txt.innerHTML = `<img style="width: 300px;" src="https://www.dicasdetreino.com.br/wp-content/uploads/2018/08/Benef%C3%ADcios-da-Creatina-para-Corredores.jpg">`
+    }
+
+    function pedala(){
+        txt.innerHTML = `<img style="width: 300px;" src="https://p2.trrsf.com/image/fget/cf/600/400/images.terra.com/2021/04/15/945743476-ciclista.jpg">`
+    }
+</script>
