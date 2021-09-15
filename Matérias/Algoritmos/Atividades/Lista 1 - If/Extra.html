@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite a quantidade de pontos que sua CNH tem <input type="text" id="total_pontos" placeholder="Total de pontos"><br>
+    <button onclick="consult()">Conferir Situação</button><br>
+
+    <div id="txt"></div>
+</body>
+</html>
+
+<script>
+    function consult(){
+        var pontos = Number(total_pontos.value);
+
+        if(pontos > 40){
+            alert("Você está com a CNH suspensa!")
+        } else if(pontos > 15 && pontos < 40) {
+            txt.innerHTML = `Sua CNH está tranquila, dirija com cautela.`
+        } else {
+            txt.innerHTML = `Tome cuidado, seus pontos estão acabando...`
+        }
+    }
+</script>

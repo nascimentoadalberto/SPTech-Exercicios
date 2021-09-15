@@ -1,0 +1,52 @@
+<!-- * Crie um programa em HTML/JS que:     
+*      a) Pergunte ao usuário sua idade.
+*      b) Ao clicar num botão "Ir pra festa":
+*           pode acontecer de aparecer um alert com a frase "Pedir permissão pro responsável" caso a idade for menor que 18
+*           sempre vai aparecer um alert com a palavra "#partiuFesta" ao final -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite sua idade: <input type="text" type="text" id="input_idade" placeholder="idade"><br>
+    <button onclick="consult()">Ir para a festa</button><br>
+    <div id="pergunta" style="display: none;">
+        Seus pais deixaram você ir?
+        <select id="permissao" onchange="perguntinha()">
+            <option value="null">--</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+        </select>
+    </div>
+
+    <div id="txt"></div>
+</body>
+</html>
+
+<script>
+    function consult(){
+        var idade = Number(input_idade.value);
+
+        if (idade > 18) {
+            txt.innerHTML = `Vamos logo, tamo atrasado`
+        } else {
+            pergunta.style.display = "block";
+
+            perguntinha();
+            txt.innerHTML = ` `
+        }
+    }
+
+    function perguntinha(){
+        if(permissao.value == "sim") {
+            txt.innerHTML = `Vamos, você tem que voltar cedo hoje.`
+        } else if(permissao.value == "nao") {
+            txt.innerHTML = `Volta pra casa cara.`
+        }
+    }
+</script>

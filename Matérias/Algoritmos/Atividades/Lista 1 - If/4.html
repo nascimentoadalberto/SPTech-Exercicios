@@ -1,0 +1,32 @@
+<!-- * Um grupo de amigos costuma (ou costumava, antes do Covid19) a se reunir a casa de um deles para pedir e comer pizza. Só que eles tinham um trato de que o valor da pizza, quando dividido entre os amigos, não passe de 20,00 por amigo. Ajude eles criando um programa em HTML/JS o qual:
+* a) Pergunte o valor da pizza
+* b) Pergunte a quantidade de amigos reunidos
+* c) Ao clicar em "Rola a pizza?", calcule e exiba o valor que cada amigo vai pagar na pizza com uma frase na página como esta "Cada amigo vai pagar R$X pela pizza"
+* d) Somente caso o valor por amigo passe de R$20,00, exiba também a frase "Deu ruim! Pizza muito cara!" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite o valor da pizza: <input type="text" id="pizza"><br>
+    Há quantos amigos reunidos? <input type="text" id="amigos"><br>
+
+    <button onclick="calc()">Vai ter pizza?</button><br>
+    <div id="txt"></div>
+</body>
+</html>
+
+<script>
+    function calc(){
+        var pagamento = (Number(pizza.value) / Number(amigos.value));
+
+        if(pagamento > 20){
+            txt.innerHTML = `Tá caro demais mano...`
+        }
+    }
+</script>

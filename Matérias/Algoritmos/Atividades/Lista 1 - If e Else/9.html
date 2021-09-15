@@ -1,0 +1,115 @@
+<!-- Crie um programa em HTML/JS o qual:
+a) No início tenha somente uma combo com os itens:
+    - Escolha uma espécie -
+    Ovíparos
+    Mamiferos
+b) Se o usuário escolher o primeiro item, nada acontece e se, eventualmente, tiver algo abaixo da combo, deve desaparecer tudo (ver itens a seguir para entender melhor)
+c) Se o usuário escolher "Ovíparos", abaixo da combo deve aparecer outra combo com os itens:
+    - Escolha um Ovíparo -
+    Galinha
+    Peixe
+    Tartaruga
+d) Se o usuário escolher "Mamíferos", abaixo da combo deve aparecer outra combo com os itens:
+    - Escolha um Mamífero -
+    Elefante
+    Porco
+    Coelho
+e) Após escolher um animal - seja em c), seja em d), uma foto de um exemplar deve aparecer abaixo da combo. Se não for escolhido um animal válido (ou seja, se for escolhido o primeiro item da lista), a foto que estive, eventualmente aparecendo some. Se nenhum estiver sendo mostrada, continua sem mostrar nada
+f) Também após escolher um animal - seja em c), seja em d), abaixo da imagem descrita em e), deve aparecer um campo de texto solicitando o "Valor de compra do animal"
+g) Abaixo do campo em f) deve ter um botão "Calcula imposto". Ao clicar nele, aparecer abaixo uma frase como esta:
+    O imposto será de R$X
+Onde X é:
+    - Caso ovíparo: %5 do valor de compra
+    - Caso mamífero: %10 do valor de compra -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        Escolha uma espécie: 
+        <select id="especie">
+            <option value="null"> -- Escolha uma espécie -- </option>
+            <option value="oviparo">Ovíparos</option>
+            <option value="mamifero">Mamíferos</option>
+        </select>
+    <br><br>
+
+    <div id="content_oviparo" style="display: none;">
+        <select id="select_oviparo">
+            <option value="null"> -- Escolha um ovíparo -- </option>
+            <option value="galinha">Galinha</option>
+            <option value="peixe">Peixe</option>
+            <option value="tartaruga">Tartaruga</option>
+        </select><br>
+
+        <img id="imagem_oviparo" style="width: 300px;" src=""><br>
+        Valor de compra: <input type="text" id="valor_oviparo"><br>
+        <button onclick="calc_oviparo()">Calcular imposto</button><br>
+        <span id="txt_oviparo"></span>
+    </div><br>
+
+    <div id="content_mamifero" style="display: none;">
+        <select id="select_mamifero">
+            <option value="null"> -- Escolha um mamífero -- </option>
+            <option value="elefante">Elefante</option>
+            <option value="porco">Porco</option>
+            <option value="coelho">Coelho</option>
+        </select><br>
+
+        <img id="imagem_mamifero" style="width: 300px;" src=""><br>
+        Valor de compra: <input type="text" id="valor_mamifero"><br>
+        <button onclick="calc_mamifero()">Calcular imposto</button><br>
+        <span id="txt_mamifero"></span>
+    </div><br>
+</body>
+</html>
+
+<script>
+    if(especie.value == "oviparo") {
+        content_oviparo.style.display = "block";
+    } else if (especie.value == "mamifero") {
+        content_mamifero.style.display = "block";
+    } else {
+        content_oviparo.style.display = "none";
+        content_mamifero.style.display = "none";
+    }
+
+    if(select_oviparo.value == "galinha") {
+        imagem_oviparo.src = `https://opresenterural.com.br/wp-content/uploads/2021/06/VACCINAR-FOTO-GALINHA-POEDEIRA-VACCINAR-DIVULGA%C3%87%C3%83O-2021-e1623170813779.jpg`
+    } else if (select_oviparo.value == "peixe") {
+        imagem_oviparo.src = `https://super.abril.com.br/wp-content/uploads/2021/05/Uma-breve-historia-do-peixe-Betta.jpg?quality=70&strip=info&w=1024`
+    } else if (select_oviparo.value == "tartaruga") {
+        imagem_oviparo.src = `https://conexaoplaneta.com.br/wp-content/uploads/2021/05/tartaruga-gigante-galapagos-conexao-planeta.jpg`
+    } else {
+        imagem_oviparo.src = ``
+    }
+
+    if(select_mamifero.value == "elefante") {
+        imagem_mamifero.src = `https://dcom-prod.imgix.net/files/inline-images/2%20%281%29%20%281%29_0.jpg`
+    } else if (select_mamifero.value == "porco") {
+        imagem_mamifero.src = `https://www.ica.ufmg.br/nepsui/wp-content/uploads/2020/05/maternidade.jpg`
+    } else if (select_mamifero.value == "coelho") {
+        imagem_mamifero.src = `https://www.infoescola.com/wp-content/uploads/2008/07/coelhos-selvagens_555976447.jpg`
+    } else {
+        imagem_mamifero.src = ``
+    }
+
+    function calc_oviparo(){
+        var valor = Number(valor_oviparo.value);
+        var percent = valor * 0.05;
+
+        txt_oviparo.innerHTML = `O valor do imposto é de: R$ ${percent}, e o total da compra é de ${(valor + percent)} por filhote.`
+    }
+
+    function calc_mamifero(){
+        var valor = Number(valor_mamifero.value);
+        var percent = valor * 0.1;
+
+        txt_mamifero.innerHTML = `O valor do imposto é de: R$ ${percent}, e o total da compra é de ${(valor + percent)} por filhote.`
+    }
+</script>

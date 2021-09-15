@@ -1,0 +1,36 @@
+<!-- Crie um programa em HTML/JS o qual:
+a) Solicita a temperatura do ambiente
+b) Ao clicar em "Verificar clima", determine se o clima está:
+    Apropriada p/ conservar alimento - Caso a temperatura for menor que 10
+    Inapropriada p/ conservar alimento - Caso a temperatura for a partir de 10
+c) Em caso de temperatura apropriada, exiba a figura de um alimento em bom estado. Caso contrário, exiba a imagem de um alimento estragado -->
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite a temperatura atual: <input type="text" id="temperatura"><br>
+    <button onclick="calc()">Verificar Clima</button><br>
+
+    <div id="content">
+        <img id="imagem" src="">
+    </div>
+</body>
+</html>
+
+<script>
+    function calc(){
+        var temp = Number(temperatura.value);
+
+        if (temp < 10) {
+            imagem.src = `https://cozinhadamomo.files.wordpress.com/2018/01/2301-frutas-uva-melao-melancia-abacaxi-banana-pera-maca-pessego.jpg`
+        } else {
+            imagem.src = `https://big1news.com.br/wp-content/uploads/2018/09/Alimentos-Estragados-%E2%80%93-Perigos-e-Como.jpg`
+        }
+    }
+</script>
