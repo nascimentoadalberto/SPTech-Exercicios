@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Login: <input type="text" id="login" placeholder="Usuário"><br>
+    Senha: <input type="password" id="senha" placeholder="Senha"><br>
+    <button onclick="validar()">Login</button>
+</body>
+</html>
+
+<script>
+    function validar() {
+        if(login.value == "bandtec" && senha.value == "digital") {
+            alert("Usuário autenticado com sucesso. Redirecionando...");
+        } else {
+            alert("Falha na autenticação. Tente novamente.")
+        }
+    }
+</script>

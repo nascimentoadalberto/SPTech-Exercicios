@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Você já clicou <span id="vezes_spn">0</span> vezes</h1>
+            <button type="button" onclick="contagem();">Clica neu</button>
+            <p id="txt"></p>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    var counter = 0;
+    function contagem(){
+        counter++;
+        vezes_spn.innerHTML = `${counter}`;
+        if(c < 5){
+            txt.innerHTML = `Dedo fraquinho, hein`;
+        }else if(counter < 10){
+            txt.innerHTML = `Dedo bom, mano`;
+        }else if(counter < 15){
+            txt.innerHTML = `Gosta de clicar, hein!`;
+        }else{
+            txt.innerHTML = `Eita dedo nervoso!`;
+        }
+    }
+</script>

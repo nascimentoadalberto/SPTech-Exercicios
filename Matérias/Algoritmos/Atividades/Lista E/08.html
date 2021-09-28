@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Alimentos ingeridos por dia</h1>
+
+            Pães franceses: <input type="text" id="pao_inpt">
+            Pacotes de bolacha recheada: <input type="text" id="bolacha_inpt">
+            Copos de achocolatado: <input type="text" id="nescau_inpt">
+            <button type="button" onclick="nutricao();">Verificar calorias</button>
+            <p id="txt"></p>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function nutricao(){
+        var caloriasPao = Number(pao_inpt.value) * 50;
+        var caloriasBolacha = Number(bolacha_inpt.value) * 80;
+        var caloriasNescau = Number(nescau_inpt.value) * 70;
+        var total = caloriasBolacha + caloriasNescau + caloriasPao;
+        if(total < 200){
+            txt.innerHTML = `Parabéns, vai sair em forma da quarentena.`;
+        }else if(total < 400){
+            txt.innerHTML = `Cuidado, vai ficar mais "fofinho(a)" após a quarentena!`;
+        }else{
+            txt.innerHTML = `Bom, acho que muitos não vão te reconhecer após a quarentena.`;
+        }
+    }
+</script>

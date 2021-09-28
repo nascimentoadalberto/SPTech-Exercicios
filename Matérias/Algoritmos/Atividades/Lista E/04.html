@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Situação do peso de uma criança (5 anos)</h1>
+            Digite o peso da criança: <input type="text" placeholder="kg" id="peso_inpt">
+            <button onclick="peso()">Verificar</button>
+            <p id="txt"></p>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function peso(){
+        var pesoCrianca = Number(peso_inpt.value);
+        if(pesoCrianca <= 13.5){
+            txt.innerHTML = `Com ${pesoCrianca}kg, a criança está abaixo do peso.`;
+        } else if(pesoCrianca == 18.3){
+            txt.innerHTML = `Com ${pesoCrianca}kg, a criança está com o peso perfeito.`;
+        } else if(pesoCrianca <= 21.2){
+            txt.innerHTML = `Com ${pesoCrianca}kg, a criança está com o peso na média.`;
+        } else {
+            txt.innerHTML = `Com ${pesoCrianca}kg, a criança está acima do peso.`;
+        }
+    }
+</script>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Valor guardado: R$ <span id="valorGuardado_inpt">0.00</span></h1>
+            <p id="txt"></p>
+            <p id="txt2"></p>
+            <button type="button" onclick="guardar();">Guardar R$ 5,00</button>
+            <button type="button" onclick="gastar();">Gastar R$ 10,00</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    var cofrinho = 0;
+    function guardar(){
+        cofrinho += 5;
+        valorGuardado_inpt.innerHTML = `${cofrinho.toFixed(2)}`;
+        if(cofrinho >= 0){
+            txt.innerHTML = `Finanças OK!`;
+            txt.style.color = 'blue';
+        }if(cofrinho > 100){
+            txt2.innerHTML = `#ostentação`;
+        }else if(cofrinho > - 20){
+            txt2.innerHTML = '';
+        }else{}
+    }
+    function gastar(){
+        cofrinho -= 10;
+        valorGuardado_inpt.innerHTML = `${cofrinho.toFixed(2)}`;
+        if(cofrinho < 0){
+            txt.innerHTML = `Finanças em perigo!`;
+            txt.style.color = 'red';
+        } else if(cofrinho < 100){
+            txt2.innerHTML = '';
+        } else if(cofrinho < -20){
+            txt2.innerHTML = `Quase um corinthians`;
+        } else {}
+    }
+</script>

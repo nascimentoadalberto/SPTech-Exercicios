@@ -28,11 +28,25 @@ fkBanda int,
 foreign key (fkBanda) references banda (idBanda)
 );
 
-insert into banda (nome) values ("Metallica"), ("Dream Theater"), ("Pink Floyd");
+insert into banda (nome) values 
+("Metallica"), 
+("Dream Theater"), 
+("Pink Floyd");
 
-insert into autor (nome, fkBanda) values ("James Hetfield", 1), ("John Petrucci, Mike Portnoy", 2);
+insert into banda (nome) values
+("Red Hot Chilli Peppers"),
+("Megadeth"),
+("Angra"),
+("Nightwish"),
+("DragonForce");
 
-insert into genero (genero, fkBanda) values ("Thrash Metal", 1), ("Progressive Metal", 2), ("Heavy Metal", 1);
+insert into autor (nome, fkBanda) values 
+("James Hetfield", 1), 
+("John Petrucci, Mike Portnoy", 2);
+
+insert into genero (genero, fkBanda) values 
+("Progressive Metal", 2), 
+("Heavy Metal", 1);
 
 insert into musica (nome, album, fkBanda) values 
 ("Master Of Puppets", "Master Of Puppets", 1),
@@ -46,10 +60,20 @@ insert into musica (nome, album, fkBanda) values
 ("Finally Free", "Scenes From A Memory", 2),
 ("Overture 1928", "Scenes From A Memory", 2);
 
-select * from banda;
+insert into musica (nome, album) values 
+("Invisible Monster", "A View From The Top Of The World"), 
+("Illumination Theory", "Dream Theater"), 
+("Pull Me Under", "Images And Words"), 
+("Enter Sandman", "Black Album"), 
+("The Unforgiven", "Black Album"), 
+("Nothing Else Matters", "Black Album");
+
+-- select * from banda;
 select * from musica;
 
-select musica.nome, musica.album, banda.nome, autor.nome, genero.genero from musica 
+select * from musica 
 inner join banda on musica.fkBanda = banda.idBanda
 inner join autor on autor.fkBanda = banda.idBanda
-inner join genero on genero.fkBanda = banda.idBanda;musica
+inner join genero on genero.fkBanda = banda.idBanda;
+
+select * from musica cross join banda;

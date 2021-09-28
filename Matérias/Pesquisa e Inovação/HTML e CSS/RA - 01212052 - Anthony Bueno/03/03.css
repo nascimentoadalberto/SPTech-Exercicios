@@ -1,0 +1,35 @@
+body {
+    width: 100vh;
+}
+
+#container{
+    background-color: #ff0000;
+    width: 500px;
+    height: 500px;
+}
+
+#content{
+    background-color: #4b2fffe7;
+    width:250px;
+    height: 250px;
+}
+
+#content_2{
+    height: 50vh;
+    width: 50%;
+    background-color: rgb(30, 255, 0);
+}
+
+#content_3{
+    width: 75vw;
+    height: 50%;
+    background-color: rgb(217, 255, 0);
+}
+
+#txt{
+    background-color: #ffffff;
+    color: #ff0000;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}

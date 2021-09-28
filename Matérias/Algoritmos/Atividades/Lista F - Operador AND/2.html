@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite sua renda: <input type="text" id="renda_pessoal"><br>
+    Digite a renda da sua família: <input type="text" id="renda_familia"><br>
+    <button onclick="calc()">Verificar Auxílio</button>
+</body>
+</html>
+
+<script>
+    function calc() {
+        var individual = Number(renda_pessoal.value);
+        var familiar = Number(renda_familia.value);
+
+        if(individual <= 1050 && familiar <= 2100){
+            alert("Você terá direito!");
+        } else {
+            alert("Você NÃO terá direito");
+        }
+    }
+</script>
