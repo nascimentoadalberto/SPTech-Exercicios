@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content">
+        <div id="container1">
+            <span id="title">Seja bem vindo(a) ao Banco KNAB</span><br>
+            <br><span id="subtitle">Simulação de Empréstimos e Investimentos</span><br>
+
+            <br>Entre com os dados de sua conta: <br>
+            Conta: <input type="text" id="login_conta"><br>
+            Dígito: <input type="text" id="login_digito"><br>
+            Senha: <input type="password" id="login_senha"><br>
+            <button onclick="confirmar()">Simular</button>
+        </div>
+
+        <div id="container2" style="display: none;">
+            <span id="title">O Banco KNAB é a sua melhor opção</span><br>
+            <br><span id="subtitle">Empréstimos e Investimentos com as melhores taxas do mercado</span><br>
+
+            <br>Entre com os dados de sua simulação: <br>
+            Valor da operação: <input type="text" id="simula_valor"><br>
+
+            <select id="operacao">
+                <option value="null">Selecione uma Operação</option>
+                <option value="emprest">Empréstimo</option>
+                <option value="invest">Investimento</option>
+            </select> 
+            <select id="prazo">
+                <option value="null">Selecione o Prazo</option>
+                <option value="curto">Curto</option>
+                <option value="medio">Médio</option>
+                <option value="longo">Longo</option>
+            </select><br>
+            <button onclick="calc()">Mostrar resultado</button>
+        </div>
+
+        <div id="container3" style="display: none;">
+            <span id="txt"></span><br>
+            <button onclick="exibir()" id="voltar">Voltar à simulação</button>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+    var contador = 0;
+    var juros = 0;
+    var rendimento = 0;
+    var calculo_juros = 0;
+    var calculo_rendimento = 0;
+
+    function confirmar(){
+        var account = Number(login_conta.value);
+        var pass = login_senha.value;
+        var digit = Number(login_digito.value);
+
+        if (account != 0 && digit == (account % 11)) {
+            if (pass == "manaus" && 0 <= digit <= 3) {
+                exibir();
+            } else if (pass == "recife" && 4 <= digit <= 7) {
+                exibir();
+            } else if (pass == "fortaleza" && 8 >= digit >= 9) {
+                exibir()
+            } else {
+                alert("Ops! Dados inseridos não encontrados. Por favor, tente novamente.");
+            }
+        } else {
+            alert("Ops! Dados inseridos não encontrados. Por favor, tente novamente.");
+        }
+    }
+
+    function exibir(){
+        container1.style.display = "none";
+        container2.style.display = "block";
+    }
+
+    function calc() {
+        var simulacao_valor = Number(simula_valor.value);
+
+        container2.style.display = "none";
+        container3.style.display = "block";
+
+        if (prazo.value == "curto" || prazo.value == "medio") {
+            txt.innerHTML += "<br>Esta operação está condicionada ao seu perfil<br>"
+        }
+
+        if (operacao.value == "emprest") {
+            if (prazo.value == "curto") {
+                juros = 0.24;
+            } else if (prazo.value == "medio") {
+                juros = 0.16;
+            } else if (prazo.value == "longo") {
+                juros = 0.1;
+            }
+
+            calculo_juros = simulacao_valor * juros;
+            txt.innerHTML += `Simulação ${contador + 1} – Para o empréstimo de R$${simulacao_valor} a ${prazo.value} prazo, serão cobrados os juros de R$ ${calculo_juros} ao ano.<br>`;
+
+        } else if(operacao.value == "invest") {
+            if (prazo.value == "curto") {
+                rendimento = 0.05;
+            } else if (prazo.value == "medio") {
+                rendimento = 0.08;
+            } else if (prazo.value == "longo") {
+                rendimento = 0.12;
+            }
+
+            calculo_rendimento = simulacao_valor * rendimento;
+            txt.innerHTML += `Simulação ${contador + 1} – Investindo R$${simulacao_valor} a ${prazo.value} prazo, o seu rendimento será de R$ ${calculo_rendimento} ao ano.<br>`;
+        }
+
+        contador++;
+    }
+</script>

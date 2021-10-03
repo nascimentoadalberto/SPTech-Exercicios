@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+#header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4vh 15vw 4vh 15vw;
+    background-color: rgb(1, 1, 74);
+    color: #32B9CD;
+}
+
+#list_container {
+    margin-right: 6vw;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin-left: 10vw;
+}
+
+li {
+    padding: 2% 4% 2% 4%;
+    font-style: normal;
+}
+
+li a {
+    color: aqua;
+}
+
+li:hover {
+    background-color: yellow;
+}
+
+li a:hover {
+    color: red;
+}
+
+#selected {
+    font-weight: bolder;
+    color: darkorchid;
+}
+
+#image_container {
+    background-image: url("https://t.ctcdn.com.br/_vdXuEhJmT6DCW_sFQIyWxN3uxQ=/1024x0/smart/i459803.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+#texto {
+    margin: 8vh 15vw 0 15vw;
+}
