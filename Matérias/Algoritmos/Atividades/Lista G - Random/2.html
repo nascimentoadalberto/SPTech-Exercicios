@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="sortear()">Sortear time</button><br>
+    <div id="txt"></div>
+</body>
+</html>
+
+<script>
+    function sortear() {
+        var sorteio = Math.random();
+        txt.innerHTML = `${(sorteio + 1).toFixed(2)}<br>`;
+
+        if (sorteio <= 0.25) {
+            txt.innerHTML += "São Paulo"
+        } else if (sorteio <= 0.5) {
+            txt.innerHTML += "Santos"
+        } else if (sorteio <= 0.75) {
+            txt.innerHTML += "Palmeiras"
+        } else if (sorteio <= 1) {
+            txt.innerHTML += "Corinthians"
+        }
+    }
+</script>

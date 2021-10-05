@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Clique para gerar uma nota entre 3 e 10: <button onclick="gerar_nota()">Gerar nota</button><br>
+    <div id="txt_nota"></div><br>
+
+    <br>Clique para gerar uma frequência entre 50 e 100: <button onclick="gerar_frequencia()">Gerar frequência</button><br>
+    <div id="txt_freq"></div><br>
+
+    <br><button onclick="situacao()">Aluno aprovado?</button><br>
+    <div id="txt_situacao"></div>
+</body>
+</html>
+
+<script>
+    var nota = 0;
+    var frequencia = 0;
+
+    function gerar_nota() {
+        nota = (Math.random() * (10 - 3) + 3);
+        txt_nota.innerHTML = (nota).toFixed(1);
+    }
+
+    function gerar_frequencia() {
+        frequencia = (Math.random() * (100 - 50) + 50);
+        txt_freq.innerHTML = (frequencia).toFixed(1);
+    }
+
+    function situacao() {
+        // frequencia > 75%
+        // notas >= 6
+        if (frequencia >= 75 && nota >= 6) {
+            txt_situacao.innerHTML = "Aluno aprovado!!!"
+        } else {
+            txt_situacao.innerHTML = "Aluno reprovado..."
+        }
+    }
+</script>

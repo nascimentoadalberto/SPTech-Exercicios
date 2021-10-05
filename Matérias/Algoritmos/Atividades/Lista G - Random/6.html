@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Que horas são? <button onclick="calc()">Relógio</button><br>
+    <div id="txt"></div>
+</body>
+</html>
+
+<script>
+    function calc() {
+        var sorteio = (Math.random() * 23);
+
+        if (sorteio <= 11) {
+            txt.innerHTML = `Bom dia, flor do dia, são ${(sorteio).toFixed()} horas!`
+        } else if (sorteio <= 17){
+            txt.innerHTML = `Boa tarde, já vai tarde! São ${(sorteio).toFixed()} horas!`
+        } else if (sorteio <= 23) {
+            txt.innerHTML = `Boa noite, durma bem! São ${(sorteio).toFixed()} horas!`
+        }
+    }
+</script>
