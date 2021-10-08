@@ -1,43 +1,50 @@
 * {
     margin: 0;
     padding: 0;
-    font-weight: normal;
+    /* font-weight: normal; */
 }
 
-#header_container {
+.header_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 4vh 15vw 4vh 15vw;
+    padding: 2.8vh 20vw 4vh 12vw;
     background-color: rgb(1, 1, 74);
     color: #32B9CD;
+    font-size: 2.25vh;
 }
 
-#list_container {
+.header_container #logo {
+    width: 10vh;
+    height: 10vh;
+    padding-left: 3vw;
+}
+
+.list_container {
     margin-right: 6vw;
+    align-items: center;
 }
 
 ul {
     display: flex;
     list-style: none;
-    margin-left: 10vw;
+    margin-left: 12vw;
 }
 
 li {
     padding: 2% 4% 2% 4%;
+    margin-left: 2vw;
     font-style: normal;
 }
 
 li a {
     color: aqua;
-}
-
-li:hover {
-    background-color: yellow;
+    text-decoration: none;
 }
 
 li a:hover {
-    color: red;
+    color: rgb(19, 140, 140);
+    text-decoration: underline;
 }
 
 #selected {
@@ -45,14 +52,79 @@ li a:hover {
     color: darkorchid;
 }
 
-#image_container {
-    background-image: url("https://t.ctcdn.com.br/_vdXuEhJmT6DCW_sFQIyWxN3uxQ=/1024x0/smart/i459803.jpeg");
+.banner_container {
+    background: #031b4e;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100vw;
-    height: 100vh;
+    width: 86.79vw;
+    margin-right: 6vw;
+    padding: 7vh 0 7vh 12vw;
+    display: flex;
+    align-items: center;
 }
 
-#texto {
+.banner_container #image {
+    width: 25vh;
+    height: 25vh;
+    margin-right: 3vw;
+}
+
+.banner_container #text_container {
+    width: 40vw;
+    padding: 7vh 16vw 7vh 3vw;
+}
+
+.banner_container .txt {
+    color: white;
+    font-size: 3vh;
+}
+
+.texto {
     margin: 8vh 15vw 0 15vw;
+}
+
+.texto .titulo {
+    font-size: 4vh;
+    margin: 2vh 0 4vh 0;
+    /* padding-left: 2vw; */
+    text-align: center;
+}
+
+.texto #txt_titulo {
+    background-color: #60b6ff;
+    border-radius: 3vh;
+    padding: 1vh 2vw;
+}
+
+.texto .txt {
+    font-size: 3vh;
+}
+
+.texto #txt2 {
+    margin-bottom: 10vh;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 2.8vh 20vw 4vh 12vw; */
+    background-color: rgb(1, 1, 74);
+    color: #32B9CD;
+    font-size: 2.25vh;
+}
+
+.footer .footer_txt {
+    text-align: center;
+    margin: 2vw;
+}
+
+.footer .footer_txt a {
+    color: aqua;
+    text-decoration: none;
+}
+
+.footer .footer_txt a:hover {
+    color: rgb(19, 140, 140);
+    text-decoration: underline;
 }

@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* font-weight: normal; */
+}
+
+body {
+    background: #97c9e8;
+}
+
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.8vh 20vw 4vh 12vw;
+    background-color: rgb(1, 1, 74);
+    color: #32B9CD;
+    font-size: 2.25vh;
+}
+
+.header_container #logo {
+    width: 10vh;
+    height: 10vh;
+    padding-left: 3vw;
+}
+
+.list_container {
+    margin-right: 6vw;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin-left: 12vw;
+}
+
+li {
+    padding: 2% 4% 2% 4%;
+    margin-left: 2vw;
+    font-style: normal;
+}
+
+li a {
+    color: aqua;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: rgb(19, 140, 140);
+    text-decoration: underline;
+}
+
+#selected {
+    font-weight: bolder;
+    color: darkorchid;
+}
+
+.container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5vh 5vw;
+    background: white;
+    border-radius: 1vw;
+    border: 5px solid #60b6ff;
+    font-size: 3vh;
+    margin-top: 30vh;
+}
+
+.login_container .login_email {
+    height: 3vh;
+}
+
+.login_container .login_senha {
+    height: 3vh;
+}
