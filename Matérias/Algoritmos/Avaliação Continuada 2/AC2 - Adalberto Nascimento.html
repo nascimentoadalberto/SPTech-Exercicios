@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação Continuada 2 - Adalberto Nascimento</title>
+</head>
+<body>
+    <div class="content">
+        <h4>Aco Pip – AS MELHORES PIPOCAS DO BRASIL</h4>
+
+        Selecione o tipo de pipoca: 
+        <select id="pipoca">
+            <option value="null">Selecione a pipoca</option>
+            <option value="Pipoca com Chocolate">Pipoca com Chocolate</option>
+            <option value="Pipoca com Caramelo">Pipoca com Caramelo</option>
+        </select><br>
+        Selecione o tipo de embalagem: 
+        <select id="embalagem">
+            <option value="null">Selecione a embalagem</option>
+            <option value="Pacote Pequeno">Pacote Pequeno</option>
+            <option value="Pacote Grande">Pacote Grande</option>
+        </select><br>
+        Digite a quantidade de pacotes: <input type="text" id="quant_pacotes" placeholder="Entre 500 e 5000"><br>
+        Digite a quantidade adicional de açúcar <input type="text" id="quant_acucar" placeholder="(caso não queira, basta digitar 0)"><br>
+        <button onclick="conferir()">Orçamento</button><br>
+
+        <div id="txt"></div><br>
+        <div id="botoes" style="display: none;">
+            <button onclick="limpar()">Novo Orçamento</button>
+            <button onclick="comprar()">Comprar</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    var pacotes = 0;
+    var acucar = 0;
+    var valor_total = 0;
+
+    function conferir() {
+        pacotes = Number(quant_pacotes.value);
+        acucar = Number(quant_acucar.value);
+
+        if (pacotes >= 500 && pacotes <= 5000) {
+            if (acucar >= 0 && acucar <= 8) {
+                calcular()
+            } else {
+                alert("Quantidade adicional de açúcar inválida!!!");
+            }
+        } else if (pacotes < 500) {
+            alert("Vendemos somente no atacado.");
+        } else if (pacotes > 5000) {
+            alert("Consulte nosso PCP (planejamento e controle da produção).");
+        }
+    }
+
+    function calcular() {
+        var caramelo_pequeno = 1.1;
+        var chocolate_pequeno = 1.2;
+        var caramelo_grande = 1.7;
+        var chocolate_grande = 1.8;
+
+        if (pipoca.value == "Pipoca com Caramelo" && embalagem.value == "Pacote Pequeno") {
+            valor_total = caramelo_pequeno * pacotes;
+        } else if (pipoca.value == "Pipoca com Chocolate" && embalagem.value == "Pacote Pequeno") {
+            valor_total = chocolate_pequeno * pacotes;
+        } else if (pipoca.value == "Pipoca com Caramelo" && embalagem.value == "Pacote Grande") {
+            valor_total = caramelo_grande * pacotes;
+        } else if (pipoca.value == "Pipoca com Chocolate" && embalagem.value == "Pacote Grande") {
+            valor_total = chocolate_grande * pacotes;
+        }
+
+        txt.innerHTML = `<b>Resumo do orçamento</b><br><br>
+                        Quantidade Solicitada: <b>${pacotes}</b><br>
+                        Embalagem Selecionada: <b>${embalagem.value}</b><br>
+                        Produto Selecionado: <b>${pipoca.value}</b><br>
+                        O Valor Total das Pipocas é de <b>R$ ${(valor_total).toFixed(2)}</b><br>`
+
+        if (acucar > 4) {
+            txt.innerHTML += `Para essa quantidade adicional de açúcar será cobrado um adicional de <b>R$ ${(valor_total * 0.07).toFixed(2)}</b>.<br>`
+        }
+
+        botoes.style.display = "block";
+    }
+
+    function limpar() {
+        valor_total = 0;
+        pipoca.value = "null";
+        embalagem.value = "null";
+        quant_pacotes.value = "";
+        quant_acucar.value = "";
+        txt.innerHTML = "";
+        botoes.style.display = "none";
+    }
+
+    function comprar() {
+        var sorteio = (Math.random() * (5.5 - 3.5) + 3.5) / 100;
+        var bonus = sorteio * valor_total;
+        txt.innerHTML += `PARABÉNS!!! Você recebeu um bônus de ${(sorteio * 100).toFixed()}%, na sua próxima compra você terá um bônus de R$ ${(valor_total + (bonus)).toFixed(2)}`
+
+        pipoca.value = "null";
+        embalagem.value = "null";
+        quant_pacotes.value = "";
+        quant_acucar.value = "";
+        valor_total = 0;
+    }
+</script>
