@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inicio" placeholder="Digite o número inicial">
+    <input type="text" id="fim" placeholder="Digite o número final">
+    <button onclick="repeater()">Click me!</button><br>
+    <div id="txt"></div>
+</body>
+</html>
+
+<script>
+    var contador = 0;
+    function repeater(){
+        txt.innerHTML = "";
+        contador = Number(inicio.value);
+        var final = Number(fim.value);
+
+        while (contador <= final) {
+            if (contador % 2 == 0) {
+                txt.innerHTML += `${contador}<br>`;
+                contador++
+            } else {
+                contador++
+            }
+        }
+    }
+</script>

@@ -64,6 +64,7 @@ li a:hover {
 
 .login_container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 5vh 5vw;
@@ -71,7 +72,30 @@ li a:hover {
     border-radius: 1vw;
     border: 5px solid #60b6ff;
     font-size: 3vh;
-    margin-top: 30vh;
+    margin-top: 20vh;
+}
+
+.login_container .login_titulo {
+    margin-bottom: 3vh;
+}
+
+.login_container input {
+    border: 1px solid #60b6ff;
+    border-radius: 1vh;
+    padding: 1vh;
+    margin-bottom: 0.5vh;
+}
+
+.login_container button {
+    padding: 0.5vh 1.5vh;
+    color: white;
+    background-color: rgb(19, 140, 140);
+    border: 1px solid;
+    border-radius: 1vh;
+}
+
+.login_container button:hover {
+    color: aqua;
 }
 
 .login_container .login_email {
@@ -80,4 +104,5 @@ li a:hover {
 
 .login_container .login_senha {
     height: 3vh;
+    margin-bottom: 3vh;
 }
