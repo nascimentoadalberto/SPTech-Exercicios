@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="calc()">Múltiplos</button><br><br>
+    <div id="txt"></div>
+</body>
+</html>
+
+<script>
+    var contador = 0;
+
+    function calc() {
+        while (contador <= 100) {
+            if (contador == 0) {
+                txt.innerHTML += `${contador}<br>`
+            } else if (contador % 3 == 0 && contador % 5 == 0) {
+                txt.innerHTML += `<b>É TRI! É PENTA!</b><br>`
+            } else if (contador % 3 == 0) {
+                txt.innerHTML += `<b>É TRI!</b><br>`
+            } else if (contador % 5 == 0) {
+                txt.innerHTML += `<b>É PENTA!</b><br>`
+            } else {
+                txt.innerHTML += `${contador}<br>`
+            }
+
+            contador++;
+        }
+    }
+</script>

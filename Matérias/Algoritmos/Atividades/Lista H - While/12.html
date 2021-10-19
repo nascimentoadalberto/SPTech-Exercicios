@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Selecione um valor a ser multiplicado: <select id="multiplicador">
+        <option value="null">Selecione o multiplicador</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select><br>
+    Digite o limite da multiplicação inicial: <input type="text" id="limitador"><br>
+    <button onclick="calc()">Ver tabuada</button><br><br>
+    <div id="txt"></div>
+</body>
+</html>
+
+<script>
+    var contador = 0;
+
+    function calc() {
+        contador = 1;
+        txt.innerHTML = "";
+
+        if (multiplicador.value == "null") {
+            alert("Selecione um valor!!!")
+        } else if (limitador.value == "") {
+            alert("Digite um valor!!!")
+        } else {
+            while (contador <= Number(limitador.value)) {
+                txt.innerHTML += `${multiplicador.value} x ${contador} = ${Number(multiplicador.value) * contador}<br>`
+                contador++;
+            }
+        }
+    }
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    quantos números deseja sortear? <input type="text" id="numeros" oninput="calc()"><br>
+    <!-- <button onclick="calc()">Sortear números</button><br> -->
+    <div id="txt"></div>
+</body>
+</html>
+
+<script>
+    function calc() {
+        txt.innerHTML = "";
+        var contador = 1;
+        var sorteio = 0;
+
+        while (contador <= Number(numeros.value)) {
+            sorteio = (Math.random() * 100);
+
+            txt.innerHTML += `${(sorteio).toFixed(0)}<br>`
+
+            if (sorteio % 6 == 0) {
+                break;
+            } else {
+                contador++
+            }
+        }
+    }
+</script>
