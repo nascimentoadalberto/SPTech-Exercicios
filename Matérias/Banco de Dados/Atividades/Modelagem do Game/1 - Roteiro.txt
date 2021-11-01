@@ -1,0 +1,7 @@
+- Escolher um jogo, tanto digital quanto de cartas ou tabuleiro.
+- Criar no mínimo 3 e no máximo 5 tabelas, relacionadas.
+- Será contabilizada como tabela também tabelas associativas.
+- Utilizar relacionamentos fortes e fracos, o máximo possível.
+- Escrever as regras do jogo.
+- É obrigatório ter pelo menos uma tabela associativa.
+- 
