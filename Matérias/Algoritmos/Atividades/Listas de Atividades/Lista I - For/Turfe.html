@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="iniciar()">Dar a Largada</button><br>
+    <div id="txt"></div>
+</body>
+</html>
+
+<script>
+    const rodadas = 7;
+        var contador = 1;
+        var tempo_cavalo1 = 0;
+        var tempo_cavalo2 = 0;
+        var tempo_cavalo3 = 0;
+
+    function iniciar() {
+        for(contador = 1; contador <= rodadas; contador++) {
+            var sorteio1 = (Math.random() * 14);
+            var sorteio2 = (Math.random() * 14);
+            var sorteio3 = (Math.random() * 14);
+
+            var cavalos = {
+                id: ["Cavalo 1", "Cavalo 2", "Cavalo 3"],
+                sorteio: [sorteio1, sorteio2, sorteio3],
+                tempo: [(tempo_cavalo1 + sorteio1), (tempo_cavalo2 + sorteio2), (tempo_cavalo3 + sorteio3)]
+            }
+
+            txt.innerHTML += `<u>Volta ${contador}</u><br>
+                ${cavalos.id[0]} – Tempo da volta: ${(cavalos.sorteio[0]).toFixed(1)} – Tempo total: ${(cavalos.tempo[0]).toFixed(1)}<br>
+                ${cavalos.id[1]} – Tempo da volta: ${(cavalos.sorteio[1]).toFixed(1)} – Tempo total: ${(cavalos.tempo[1]).toFixed(1)}<br>
+                ${cavalos.id[2]} – Tempo da volta: ${(cavalos.sorteio[2]).toFixed(1)} – Tempo total: ${(cavalos.tempo[2]).toFixed(1)}<br><br>
+            `
+        }
+    }
+</script>

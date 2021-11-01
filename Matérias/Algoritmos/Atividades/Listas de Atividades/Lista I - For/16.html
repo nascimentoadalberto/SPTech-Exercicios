@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">
+                Quantos depósitos você fez no banco? <input type="text" id="qtd_inpt"><br>
+                Qual o valor desses depósitos? <input type="text" id="valor_inpt" placeholder="R$"><br>
+                <button type="button" onclick="bank();">Acompanhar grana</button>
+                <div id="msg"></div>
+                <div id="msg2"></div>
+            </div>
+        </div>
+    </body>
+    <script>
+        function bank(){
+            var qtd = Number(qtd_inpt.value);
+            var valor = Number(valor_inpt.value);
+            var total = 0;
+            var soma = 0;
+            msg.innerHTML = ""
+            if(qtd < 3 || qtd > 24){
+                alert('A quantidad deve estar entre 3 e 24');
+            }else if(valor < 1000){
+                alert('O valor deve ser maior ou igual a 1000');
+            }else{
+                for(var i = 1; i <= qtd; i++){
+                    soma += valor;
+                    if(i % 3 == 0){
+                        soma += (soma*0.01);
+                        msg.innerHTML += `${i} Mês: R$ ${(soma).toFixed(2)} <img src="https://imagensemoldes.com.br/wp-content/uploads/2020/04/Imagem-de-Estrela-PNG-1024x974.png" style="width:10px"><br>`;
+                    }else{
+                        msg.innerHTML += `${i}º Mês: R$ ${(soma).toFixed(2)}<br>`;
+                    }
+                }
+                total += (soma);
+                msg2.innerHTML = `Total guardado: R$ ${total.toFixed(2)}`;
+            }
+        }
+    </script>
+</html>

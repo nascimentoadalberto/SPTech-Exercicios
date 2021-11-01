@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula38 Textos</title>
+</head>
+<body>
+    <h2>Operações com textos</h2>
+
+    <!-- onkeyup indica o que vai acontecer logo após usar uma tecla qualquer -->
+    Digite uma frase: <input id="ipt_frase" onkeyup="analisar()" >
+    <br><br>
+    <div id="div_result"></div>
+</body>
+</html>
+<script>
+    function analisar() {
+        var ax_frase = ipt_frase.value;
+        div_result.innerHTML = ` `;
+
+        div_result.innerHTML += `Quantos caracteres? ${ax_frase.length} <br>`;
+        
+        // startsWith('e') verifica se a variável começa com o(s) caracter(es) especificado 
+        div_result.innerHTML += `Ela começa com "e"? ${ax_frase.startsWith('e')} <br>`;
+
+        div_result.innerHTML += `Ela começa com "13@"? ${ax_frase.startsWith('13@')} <br>`;
+
+        div_result.innerHTML += `Ela começa com "www."? ${ax_frase.startsWith('www.')} <br>`;
+
+        div_result.innerHTML += `Ela começa com "e" ou "E"? ${ax_frase.startsWith('e')||ax_frase.startsWith('E')} <br>`;
+
+        div_result.innerHTML += `Ela começa com "O amor é lindo"? ${ax_frase.startsWith('O amor é lindo')} <br>`;
+
+        // endsWith('e') verifica se a variável termina com o(s) caracter(es) especificado 
+        div_result.innerHTML += `Ela termina com ".br"? ${ax_frase.endsWith('.br')} <br>`;
+
+        div_result.innerHTML += `Qual é a letra da posição 3? ${ax_frase[3]} <br>`;
+
+        div_result.innerHTML += `Qual é a primeira letra? ${ax_frase[0]} <br>`;
+
+        div_result.innerHTML += `Qual é a última letra? ${ax_frase[ax_frase.length-1]} <br>`;
+
+        div_result.innerHTML += `Onde está o 1ª "o"? ${ax_frase.indexOf('o')} <br>`;
+
+        div_result.innerHTML += `Onde está o 1ª "ert"? ${ax_frase.indexOf('ert')} <br>`;
+
+        // toUpperCase() e o toLowerCase() NÃO ALTERA o conteudo da variável,
+        // eles simplesmente mostram em caixa alta ou caixa baixa respectivamente
+        div_result.innerHTML += `Como fica em maiusculo ${ax_frase.toUpperCase()} <br>`;
+
+        div_result.innerHTML += `Como fica em minusculo ${ax_frase.toLowerCase()} <br>`;
+
+        div_result.innerHTML += `Frase Original ${ax_frase} <br>`;
+
+        var ax_caixa_alta = ax_frase.toUpperCase();
+        div_result.innerHTML += `Como ficou ax_caixa_alta ${ax_caixa_alta} <br>`;
+
+    }
+    
+</script>

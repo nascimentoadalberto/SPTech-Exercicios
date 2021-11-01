@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parte1">
+        Digite um número maior que 10 e menor que 50: <input type="text" id="dividendo"><br>
+        Digite o divisor: <input type="text" id="divisor"><br>
+        <button onclick="verificar()">Sortear</button><br>
+    </div>
+
+    <div id="parte2" style="display: none;">
+        <div id="txt"></div>
+
+        <button onclick="resetar()">Voltar</button>
+    </div>
+</body>
+</html>
+
+<script>
+    var quant_sorteio = 0;
+    var contador = 1;
+
+    function verificar() {
+        if (!(Number(dividendo.value) >= 10 && Number(dividendo.value) <= 50) || !(Number(divisor.value) >= 1 && Number(divisor.value) <= 10)) {
+            alert("Erro! Digite um número válido");
+        } else {
+            calc();
+            parte1.style.display = "none";
+            parte2.style.display = "block";
+        }
+    }
+
+    function calc() {
+        quant_sorteio = Number(dividendo.value);
+        var sorteio
+        while(contador <= quant_sorteio) {
+            sorteio += Marh.random() * 100;
+            contador++
+        }
+    }
+
+    function resetar() {
+        parte1.style.display = "block";
+        parte2.style.display = "none";
+
+        dividendo.value = 0;
+        divisor.value = 0;
+    }
+</script>
