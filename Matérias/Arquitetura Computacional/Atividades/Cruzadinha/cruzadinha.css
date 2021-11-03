@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5vh 5vw;
+    background-color: aqua;
+}
+
+.cruzadinha_container {
+    background-color: darkkhaki;
+    width: 55vw;
+    height: 100vh;
+    /* display: flex; */
+}
+
+.cruzadinha_container .palavra {
+    display: flex;
+}
+
+.cruzadinha_container .horizontal {
+    flex-direction: row;
+}
+
+.cruzadinha_container .vertical {
+    flex-direction: column;
+}
+
+.cruzadinha_container input {
+    width: 3vh;
+    height: 3vh;
+    margin: 0.07vh;
+}
+
+.respostas_container {
+    background-color: crimson;
+    width: 30vw;
+    height: 100vh;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 1%;
+}
+
+.respostas_container .title {
+    padding-left: 5%;
+    font-size: 1.5em;
+}
+.quadcore {
+    padding-bottom: 30vh;
+    z-index: 2;
+    float: right;
+}
