@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>viacep</title>
+</head>
+<body>
+    Digite seu CEP: <input type="text" id="user_cep"><button onclick="buscar_dados()">Verificar CEP</button><br>
+    <span id="rua">minha rua</span><br>
+    <span id="cep">meu cep</span><br>
+    <span id="bairro">meu bairro</span><br>
+    <span id="cidade">minha cidade</span><br>
+</body>
+</html>
+<script>
+    function buscar_dados() {
+        fetch(`https://viacep.com.br/ws/${user_cep.value}/json/`)
+        .then(function(resultado) {
+            // console.log(resultado);
+
+            resultado.json()
+            .then(function(json) {
+                rua.innerHTML = json.logradouro
+                cep.innerHTML = json.cep
+                bairro.innerHTML = json.bairro
+                cidade.innerHTML = json.localidade
+                console.log(json);
+            })
+            .catch(function(error) {
+                console.log(error);
+            })
+        })
+    }
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéAPI</title>
+</head>
+<body>
+    Digite o nome de um Pokémon: <input type="text" id="pokemon_nome"><button onclick="verificar()">Ver Pokémon</button><br><br>
+    <div id="txt"></div>
+    <img src="#" alt="Selecione um Pokémon!" id="img_pokemon" style="width: 500px; display: none;">
+    
+</body>
+</html>
+
+<script>
+    function verificar() {
+        fetch(`https://pokeapi.co/api/v2/pokemon/${(pokemon_nome.value).toLowerCase()}`).then(function(resposta) {
+            resposta.json()
+            .then(function(json) {
+                console.log(json);
+                txt.innerHTML = `O Pokémon selecionado é o <span style="text-transform: capitalize;">${json.name}</span>`;
+                img_pokemon.style.display = 'block';
+                img_pokemon.src = json.sprites.front_default;
+            })
+            .catch(function(error) {
+                console.log(error);
+                img_pokemon.style.display = 'none';
+                alert("Erro: Pokémon não encontrado...");
+            })
+        })
+    }
+</script>
