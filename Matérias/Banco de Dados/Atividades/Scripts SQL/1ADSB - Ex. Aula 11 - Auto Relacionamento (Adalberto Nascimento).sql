@@ -8,11 +8,12 @@ descricao varchar(500)
 );
 
 create table if not exists alunos (
-idAluno int not null primary key auto_increment,
+idAluno int not null auto_increment,
 nomeAluno varchar(45) not null,
 telefone varchar(11),
 fkRepresentante int,
 fkProjetos int not null,
+primary key (idAluno, fkRepresentante),
 foreign key (fkRepresentante) references alunos (idAluno),
 foreign key (fkProjetos) references projetos (idProjeto)
 );
@@ -22,6 +23,7 @@ idAcompanhante int not null primary key auto_increment,
 nomeAcompanhante varchar(45) not null,
 relacao varchar(45) not null,
 fkAlunos int,
+primary key (idAcompanhante, fkAlunos),
 foreign key (fkAlunos) references alunos (idAluno)
 );
 
@@ -65,3 +67,4 @@ where nomeProjeto = "Hiveward";
 select alunos.nomeAluno, projetos.nomeProjeto, projetos.descricao, acompanhantes.nomeAcompanhante, acompanhantes.relacao from alunos
 inner join projetos on alunos.fkProjetos = projetos.idProjeto
 inner join acompanhantes on acompanhantes.fkAlunos = alunos.idAluno;
+
