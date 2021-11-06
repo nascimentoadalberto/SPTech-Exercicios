@@ -1,205 +1,1761 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cruzadinha</title>
-    <link rel="stylesheet" href="cruzadinha.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="./cruzadinha.css"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <title>Cruzadinha - Adalberto e Carlos Roberto</title>
+
+  <style>
+    *::placeholder {
+      text-align: center;
+      font-size: 80%;
+    }
+
+    input {
+      width: 3vh;
+      height: 3vh;
+      margin: 0.07vh;
+      opacity: 0.3;
+    }
+
+    input:hover {
+      opacity: 1.5;
+      transition: 0.3s;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #ececec;
+      background-color: black;
+    }
+
+    .main_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #botao_validar {
+      padding: 1% 1.5%;
+      border-radius: 0.7vh;
+      font-size: 97%;
+      margin-left: 47.5%;
+      margin-top: 3%;
+    }
+
+    table {
+      background-image: url('http://2.bp.blogspot.com/-wnxeOGbKa9s/VE1zg5Qu7yI/AAAAAAAAn54/S8TewajpSAw/s1600/greatest-superhero-gif-ever.gif');
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 2%;
+      box-shadow: 1vh 4vh 3vh 1vh rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      padding: 2% 3%;
+    }
+
+    .dicas {
+      padding: 2% 3%;
+    }
+  </style>
+
 </head>
 <body>
-    <div class="main_container">
-        <div class="cruzadinha_container">
-            <div class="ram palavra horizontal">
-                <input type="text" id="ram_letra_1" placeholder="1">
-                <input type="text" id="ram_letra_2" placeholder="→">
-                <input type="text" id="ram_letra_3">
-            </div>
+  <div class="main_container">
+    <h1 class="titulo">Cruzadinha</h1>
+    <table id="id_table">
+      <tr id="tr_1">
+        <td>
+          <input disabled id="td_1_1"></div> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input placeholder="9" maxlength="1" tabindex="1" id="dma_letra_1 letra" class="dma_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+  
+      <tr id="tr_1">
+        <td>
+          <input disabled id="td_1_1" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input placeholder="↓" maxlength="1" tabindex="1" id="dma_letra_2 letra" class="dma_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+  
+      <tr id="tr_1">
+        <td>
+          <input disabled id="td_1_1" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input placeholder="4" maxlength="1" tabindex="1" id="ram_letra_1 letra" class="ram_input" type="text">
+        </td>
+        <td>
+          <input placeholder="→" maxlength="1" tabindex="1" id="dma_ram_conexao letra" class="dma_input ram_input" type="text"> 
+        </td>
+        <td>
+          <input placeholder="8" maxlength="1" tabindex="1" id="ram_memoriamassa_conexao letra" class="ram_input memoriamassa_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+  
+      <tr id="tr_1">
+        <td>
+          <input disabled id="td_1_1" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input placeholder="↓" maxlength="1" tabindex="1" id="memoriamassa_letra_2 letra" class="memoriamassa_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input placeholder="6" maxlength="1" tabindex="1" id="eprom_letra_1 letra" class="memoriamassa_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+  
+      <tr id="tr_1">
+        <td>
+          <input disabled id="td_1_1" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="memoriamassa_letra_3 letra" class="memoriamassa_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input placeholder="↓" maxlength="1" tabindex="1" id="eprom_letra_2 letra" class="memoriamassa_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+  
+      <tr id="tr_1">
+        <td>
+          <input disabled id="td_1_1" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="memoriamassa_letra_4 letra" class="memoriamassa_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input placeholder="↑" maxlength="1" tabindex="1" id="i5_letra_2 letra" class="i5_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="eprom_letra_3 letra" class="eprom_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+  
+      <tr id="tr_1">
+        <td>
+          <input disabled id="td_1_1" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input placeholder="3" maxlength="1" tabindex="1" id="memoriamassa_registradores_conexao letra" class="memoriamassa_input registradores_input" type="text"> 
+        </td>
+        <td>
+          <input placeholder="→" maxlength="1" tabindex="1" id="registradores_letra_2 letra" class="registradores_input" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="registradores_letra_3 letra" class="registradores_input" type="text"> 
+        </td>
+        <td>
+          <input placeholder="13/14" maxlength="1" tabindex="1" id="registradores_i5_i7_conexao letra" class="registradores_input i5_input i7_input" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="registradores_letra_5 letra" class="registradores_input" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="registradores_letra_6 letra" class="registradores_input" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="registradores_letra_7 letra" class="registradores_input" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="registradores_letra_8 letra" class="registradores_input" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="registradores_letra_9 letra" class="registradores_input" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="registradores_eprom_conexao letra" class="registradores_input eprom_input" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="registradores_letra_11 letra" class="registradores_input" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="registradores_letra_12 letra" class="registradores_input" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="registradores_adressbus_conexao letra" class="registradores_input addressbus_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+  
+      <tr id="tr_1">
+        <td>
+          <input disabled id="td_1_1" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="memoriamassa_letra_6 letra" class="memoriamassa_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input placeholder="↓" maxlength="1" tabindex="1" id="i7_letra_2 letra" class="i7_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="eprom_letra_5 letra" class="eprom_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="adressbus_letra_8 letra" class="addressbus_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+  
+      <tr id="tr_1">
+        <td>
+          <input disabled id="td_1_1" type="text"> 
+        </td>
+        <td>
+          <input placeholder="1 \ 10" maxlength="1" tabindex="1" id="cs_cpu_conexao letra" class="cpu_input" type="text"> 
+        </td>
+        <td>
+          <input placeholder="→" maxlength="1" tabindex="1" id="cs_letra_2" class="cs_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="memoriamassa_letra_7 letra" class="memoriamassa_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="adressbus_letra_7 letra" class="addressbus_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+  
+      <tr id="tr_1">
+        <td>
+          <input disabled id="td_1_1" type="text"> 
+        </td>
+        <td>
+          <input placeholder="↓" maxlength="1" tabindex="1" id="cpu_letra_2 letra" class="cpu_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="memoriamassa_letra_8 letra" class="memoriamassa_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="adressbuss_letra_6 letra" class="addressbus_input" type="text">
+      </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+  
+      <tr id="tr_1">
+        <td>
+          <input maxlength="1" tabindex="1" id="quadcore_letra_1 letra" class="quadcore_input" type="text" placeholder="16"> 
+          </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="quadcore_cpu_conexao letra" class="quadcore_input cpu_input" type="text" placeholder="→"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="quadcore_letra_3 letra" class="quadcore_input" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="quadcore_letra_4 letra" class="quadcore_input" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="quadcore_letra_5 letra" class="quadcore_input" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="quadcore_letra_6 letra" class="quadcore_input" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="quadcore_letra_7 letra" class="quadcore_input" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="quadcore_memoriamassa_conexao letra" class="quadcore_input memoriamassa_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="adressbus_databus_conexao letra" class="adressbus_input databus_input" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="databus_letra_6 letra" class="databus_input"  type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="databus_letra_5 letra" class="databus_input"  type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="databus_letra_4 letra" class="databus_input"  type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="databus_letra_3 letra" class="databus_input"  type="text"> 
+        </td>
+        <td>
+          <input placeholder="←" maxlength="1" tabindex="1" id="databus_letra_2" class="databus_input" type="text"> 
+        </td>
+        <td>
+          <input placeholder="12/15" maxlength="1" tabindex="1" id="databus_dualcore_conexao letra" class="databus_input dualcore_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+  
+      <tr id="tr_1">
+        <td>
+          <input disabled id="td_1_1" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="memoriamassa_letra_10 letra" class="memoriamassa_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="adressbus_letra_4 letra" class="adressbus_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input placeholder="↓" maxlength="1" tabindex="1" id="dualcore_letra_3 letra" class="dualcore_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+  
+      <tr id="tr_1">
+        <td>
+          <input disabled id="td_1_1" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="memoriamassa_letra_11 letra" class="memoriamassa_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="adressbus_letra_3 letra" class="adressbus_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="dualcore_letra_4 letra" class="dualcore_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+  
+      <tr id="tr_1">
+        <td>
+          <input disabled id="td_1_1" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="memoriamassa_letra_12 letra" class="memoriamassa_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input placeholder="↑" maxlength="1" tabindex="1" id="adressbus_letra_2 letra" class="adressbus_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="dualcore_letra_5 letra" class="dualcore_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        
+      <tr id="tr_1">
+        <td>
+          <input disabled id="td_1_1" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="flash_letra_1 letra" type="text" class="flash_input" placeholder="7"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="flash_letra_2 letra" type="text" class="flash_input" placeholder="→"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="flash_letra_3 letra" class="flash_input" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="flash_memoriamassa_conexao letra" class="flash_input memoriamassa_input" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="flash_letra_5 letra" class="flash_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input placeholder="2" maxlength="1" tabindex="1" id="ula_letra_1 letra" class="ula_input" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="ula_letra_2 letra" class="ula_input" type="text" placeholder="→"> 
+        </td>
+        <td>
+          <input placeholder="11" maxlength="1" tabindex="1" id="ula_adressbus_conexao letra" class="ula_input adressbus_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="dualcore_letra_6 letra" class="dualcore_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+  
+      <tr id="tr_1">
+        <td>
+          <input disabled id="td_1_1" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="memoriamassa_letra_14 letra" class="memoriamassa_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="dualcore_letra_7 letra" class="dualcore_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+  
+      <tr id="tr_1">
+        <td>
+          <input disabled id="td_1_1" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input placeholder="5" maxlength="1" tabindex="1" id="rom_dualcore_conexao letra" class="rom_input dualcore_input" type="text"> 
+        </td>
+        <td>
+          <input placeholder="→" maxlength="1" tabindex="1" id="rom_letra_2 letra" class="rom_input" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="rom_letra_3 letra" class="rom_input" type="text"> 
+        </td>
+  
+      <tr id="tr_1">
+        <td>
+          <input disabled id="td_1_1" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input maxlength="1" tabindex="1" id="dualcore_letra_3 letra" class="dualcore_input" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+        <td>
+          <input disabled class="input_desativado" type="text"> 
+        </td>
+    </table>
+  </div>
 
-            <div class="rom palavra horizontal">
-                <input type="text" id="rom_letra_1" placeholder="2">
-                <input type="text" id="rom_letra_2" placeholder="→">
-                <input type="text" id="rom_letra_3">
+  <div class="dicas_container">
+    <button id="botao_validar" onclick="verificacao_inicial()">Validar</button><br>
+    <div id="msg"></div>
+    <div class="banner-login">
+      <div class="container">
+          <div class="card">
+            <div class="dicas">
+              <h2>Dicas para as palavras </h2>
+                <span>
+                  <p> 1. Ele é responsável por armazenar arquivos em massa </p>
+                  <p> 2. recurso da placa mãe que capacita os periféricos a terem acesso direto à memória RAM</p>
+                  <p> 3. Ele  possui quatro núcleos e trabalha com todos eles ao mesmo tempo, executando várias funções </p>
+                  <p> 4. Ele é o principal item de hardware do computador,  que também é conhecido como processador. A sua principal responsabilidade é calcular e realizar tarefas determinadas pelo usuário e é considerado o cérebro do PC.</p>
+                  <p> 5. Possuem uma micro-arquitetura que marca o retorno do o Hyper-Threading, que cria dois núcleos virtuais a partir de cada núcleo físico. Eles são quad-core, tem-se um total de 8 núcleos virtuais </p>
+                  <p> 6. É um dispositivo que realiza operações lógicas e aritméticas sobre números representados em circuitos lógicos. </p>
+                  <p> 7. É a memória não volátil que é capaz de armazenar as informações, para serem recuperadas e utilizadas posteriormente, mesmo depois de a alimentação ter sido interrompida. </p>
+                  <p> 8. Ele possui 2 núcleos é capaz de lidar com tarefas diferentes para deixar a máquina mais rápida, na hora de executar ações.</p>
+                  <p> 9. É o nome de uma linha de controle em eletrônica digital usada para selecionar um (ou um conjunto) de circuitos integrados  de vários conectados ao mesmo barramento de computador </p>
+                  <p> 10. Um espaço de armazenamento temporário que é usada para armazenar dados que estão sendo processados neste momento pela sua máquina.</p>
+                  <p> 11. Uma arquitetura de barramento de computador usada para transferir dados entre dispositivos que são identificados pelo endereço de hardware da memória </p>
+                  <p> 12. Um barramento de dados é uma estrutura de software centrada em dados para distribuição e gerenciamento de dados em tempo real em sistemas distribuídos inteligentes</p>
+                  <p> 13. é um tipo de dispositivo de armazenamento não volátil, ou seja, mesmo se não tiver energia, manterá as informações que salvas nela </p>
+                  <p> 14. permite a gravação de dados uma única vez, não sendo possível apagar ou editar nenhuma informação, somente acessar a mesma. </p>
+                  <p> 15. circuitos digitais capazes de armazenar e deslocar informações binárias, e são tipicamente usados como um dispositivo de armazenamento temporário </p>
+                  <p> 16. uma das séries de processadores para desktops e notebooks da Intel. O primeiro modelo foi lançado em setembro de 2009 </p>
+                </span>
+              </div>
             </div>
-
-            <div class="cpu palavra horizontal">
-                <input type="text" id="cpu_letra_1" placeholder="3">
-                <input type="text" id="cpu_letra_2" placeholder="→">
-                <input type="text" id="cpu_letra_3">
-            </div>
-
-            <div class="memoria_de_massa palavra horizontal">
-                <input type="text" id="memoria_de_massa_letra_1" placeholder="4">
-                <input type="text" id="memoria_de_massa_letra_2" placeholder="→">
-                <input type="text" id="memoria_de_massa_letra_3">
-                <input type="text" id="memoria_de_massa_letra_4">
-                <input type="text" id="memoria_de_massa_letra_5">
-                <input type="text" id="memoria_de_massa_letra_6">
-                <input type="text" id="memoria_de_massa_letra_7">
-                <input type="text" id="memoria_de_massa_letra_8">
-                <input type="text" id="memoria_de_massa_letra_9">
-                <input type="text" id="memoria_de_massa_letra_10">
-                <input type="text" id="memoria_de_massa_letra_11">
-                <input type="text" id="memoria_de_massa_letra_12">
-                <input type="text" id="memoria_de_massa_letra_13">
-                <input type="text" id="memoria_de_massa_letra_14">
-            </div>
-
-            <div class="ula palavra vertical">
-                <input type="text" id="ula_letra_1" placeholder="5">
-                <input type="text" id="ula_letra_2" placeholder="↓">
-                <input type="text" id="ula_letra_3">
-            </div>
-
-            <div class="registradores palavra vertical">
-                <input type="text" id="registradores_letra_1" placeholder="6">
-                <input type="text" id="registradores_letra_2" placeholder="↓">
-                <input type="text" id="registradores_letra_3">
-                <input type="text" id="registradores_letra_4">
-                <input type="text" id="registradores_letra_5">
-                <input type="text" id="registradores_letra_6">
-                <input type="text" id="registradores_letra_7">
-                <input type="text" id="registradores_letra_8">
-                <input type="text" id="registradores_letra_9">
-                <input type="text" id="registradores_letra_10">
-                <input type="text" id="registradores_letra_11">
-                <input type="text" id="registradores_letra_12">
-                <input type="text" id="registradores_letra_13">
-            </div>
-
-            <div class="flash palavra horizontal">
-                <input type="text" id="flash_letra_1" placeholder="7">
-                <input type="text" id="flash_letra_2" placeholder="→">
-                <input type="text" id="flash_letra_3">
-                <input type="text" id="flash_letra_4">
-                <input type="text" id="flash_letra_5">
-            </div>
-
-            <div class="eprom palavra vertical">
-                <input type="text" id="eprom_letra_1" placeholder="8">
-                <input type="text" id="eprom_letra_2" placeholder="↓">
-                <input type="text" id="eprom_letra_3">
-                <input type="text" id="eprom_letra_4">
-                <input type="text" id="eprom_letra_5">
-            </div>
-
-            <div class="adressbus palavra horizontal">
-                <input type="text" id="adressbus_letra_1" placeholder="9">
-                <input type="text" id="adressbus_letra_2" placeholder="→">
-                <input type="text" id="adressbus_letra_3">
-                <input type="text" id="adressbus_letra_4">
-                <input type="text" id="adressbus_letra_5">
-                <input type="text" id="adressbus_letra_6">
-                <input type="text" id="adressbus_letra_7">
-                <input type="text" id="adressbus_letra_8">
-                <input type="text" id="adressbus_letra_9">
-            </div>
-
-            <div class="databus palavra vertical">
-                <input type="text" id="databus_letra_1" placeholder="10">
-                <input type="text" id="databus_letra_2" placeholder="↓">
-                <input type="text" id="databus_letra_3">
-                <input type="text" id="databus_letra_4">
-                <input type="text" id="databus_letra_5">
-                <input type="text" id="databus_letra_6">
-                <input type="text" id="databus_letra_7">
-            </div>
-
-            <div class="oma palavra horizontal">
-                <input type="text" id="oma_letra_1" placeholder="11">
-                <input type="text" id="oma_letra_2" placeholder="→">
-                <input type="text" id="oma_letra_3">
-            </div>
-
-            <div class="cs palavra horizontal">
-                <input type="text" id="cs_letra_1" placeholder="12">
-                <input type="text" id="cs_letra_2" placeholder="→">
-            </div>
-
-            <div class="i5 palavra vertical">
-                <input type="text" id="i5_letra_1" placeholder="13">
-                <input type="text" id="i5_letra_2" placeholder="↓">
-            </div>
-
-            <div class="i7 palavra horizontal">
-                <input type="text" id="i7_letra_1" placeholder="14">
-                <input type="text" id="i7_letra_2" placeholder="→">
-            </div>
-
-            <div class="dualcore palavra vertical">
-                <input type="text" id="dualcore_letra_1" placeholder="15">
-                <input type="text" id="dualcore_letra_2" placeholder="↓">
-                <input type="text" id="dualcore_letra_3">
-                <input type="text" id="dualcore_letra_4">
-                <input type="text" id="dualcore_letra_5">
-                <input type="text" id="dualcore_letra_6">
-                <input type="text" id="dualcore_letra_7">
-                <input type="text" id="dualcore_letra_8">
-            </div>
-
-            <div class="quadcore palavra horizontal">
-                <input type="text" id="quadcore_letra_1" placeholder="16">
-                <input type="text" id="quadcore_letra_2" placeholder="→">
-                <input type="text" id="quadcore_letra_3">
-                <input type="text" id="quadcore_letra_4">
-                <input type="text" id="quadcore_letra_5">
-                <input type="text" id="quadcore_letra_6">
-                <input type="text" id="quadcore_letra_7">
-                <input type="text" id="quadcore_letra_8">
-            </div>
-
-        </div>
-        <div class="respostas_container">
-            <span class="title">Dicas</span>
-            <span class="resposta1">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit recusandae
-            </span>
-            <span class="resposta2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit recusandae
-            </span>
-            <span class="resposta3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit recusandae
-            </span>
-            <span class="resposta4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit recusandae
-            </span>
-            <span class="resposta5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit recusandae
-            </span>
-            <span class="resposta6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit recusandae
-            </span>
-            <span class="resposta7">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit recusandae
-            </span>
-            <span class="resposta8">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit recusandae
-            </span>
-            <span class="resposta9">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit recusandae
-            </span>
-            <span class="resposta10">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit recusandae
-            </span>
-            <span class="resposta11">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit recusandae
-            </span>
-            <span class="resposta12">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit recusandae
-            </span>
-            <span class="resposta13">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit recusandae
-            </span>
-            <span class="resposta14">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit recusandae
-            </span>
-            <span class="resposta15">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit recusandae
-            </span>
-            <span class="resposta16">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit recusandae
-            </span>
         </div>
     </div>
+  </div>
 </body>
-</html>
+
+<!-- <script src="./validacao_cruzadinha.js"></script> -->
+
+<script>
+
+function verificacao_inicial() {
+  // vetores com as letras e palavras
+    var cpu = (document.getElementById(cs_cpu_conexao).value + document.getElementById(cpu_letra_2).value + document.getElementById(quadcore_cpu_conexao).value)
+    var ula = (document.getElementById(ula_letra_1).value + document.getElementById(ula_letra_2).value + document.getElementById(ula_adressbus_conexao).value)
+    var registradores = (document.getElementById(memoriamassa_registradores_conexao).value + document.getElementById(registradores_letra_2).value + document.getElementById(registradores_letra_3).value + document.getElementById(registradores_i5_i7_conexao).value + document.getElementById(registradores_letra_5).value + document.getElementById(registradores_letra_6).value + document.getElementById(registradores_letra_7).value + document.getElementById(registradores_letra_8).value + document.getElementById(registradores_letra_9).value + document.getElementById(registradores_eprom_conexao).value + document.getElementById(registradores_letra_11).value, document.getElementById(registradores_letra_12).value, document.getElementById(registradores_adressbus_conexao).value)
+    var ram = (document.getElementById(ram_letra_1).value + document.getElementById(dma_ram_conexao).value + document.getElementById(ram_memoriamassa_conexao).value)
+    var rom = (document.getElementById(rom_dualcore_conexao).value + document.getElementById(rom_letra_2).value + document.getElementById(rom_letra_3).value)
+    var eprom = (document.getElementById(eprom_letra_1).value + document.getElementById(eprom_letra_2).value + document.getElementById(eprom_letra_3).value + document.getElementById(registradores_eprom_conexao).value + document.getElementById(eprom_letra_5).value)
+    var flash = (document.getElementById(flash_letra_1).value + document.getElementById(flash_letra_2).value + document.getElementById(flash_letra_3).value + document.getElementById(flash_memoriamassa_conexao).value + document.getElementById(flash_letra_5).value)
+    var memoriamassa = (document.getElementById(memoriamassa_letra_2).value + document.getElementById(memoriamassa_letra_3).value + document.getElementById(memoriamassa_letra_4).value + document.getElementById(memoriamassa_registradores_conexao).value + document.getElementById(memoriamassa_letra_6).value + document.getElementById(memoriamassa_letra_7).value + document.getElementById(memoriamassa_letra_8).value + document.getElementById(quadcore_memoriamassa_conexao).value + document.getElementById(memoriamassa_letra_10).value + document.getElementById(memoriamassa_letra_11).value + document.getElementById(memoriamassa_letra_12).value + document.getElementById(flash_memoriamassa_conexao).value + document.getElementById(memoriamassa_letra_14).value)
+    var dma = (document.getElementById(dma_letra_1).value + document.getElementById(dma_letra_2).value + document.getElementById(dma_ram_conexao).value)
+    var cs = (document.getElementById(cs_cpu_conexao).value + document.getElementById(cs_letra_2).value)
+    var addressbus = (document.getElementById(ula_adressbus_conexao).value + document.getElementById(adressbus_letra_2).value + document.getElementById(adressbus_letra_3).value + document.getElementById(adressbus_letra_4).value + document.getElementById(adressbus_databus_conexao).value + document.getElementById(adressbuss_letra_6).value + document.getElementById(adressbus_letra_7).value + document.getElementById(adressbus_letra_8).value + document.getElementById(registradores_adressbus_conexao).value)
+    var databus = (document.getElementById(databus_dualcore_conexao).value + document.getElementById(databus_letra_2).value + document.getElementById(databus_letra_3).value + document.getElementById(databus_letra_4).value + document.getElementById(databus_letra_5).value + document.getElementById(databus_letra_6).value + document.getElementById(adressbus_databus_conexao).value)
+    var i5 = (document.getElementById(i5_letra_2).value + document.getElementById(registradores_i5_i7_conexao).value)
+    var i7 = (document.getElementById(i7_letra_2).value + document.getElementById(registradores_i5_i7_conexao).value)
+    var dualcore = (document.getElementById(databus_dualcore_conexao).value + document.getElementById(dualcore_letra_3).value + document.getElementById(dualcore_letra_4).value + document.getElementById(dualcore_letra_5).value + document.getElementById(dualcore_letra_6).value + document.getElementById(dualcore_letra_7).value + document.getElementById(rom_dualcore_conexao).value)
+    var quadcore = (document.getElementById(quadcore_letra_1).value + document.getElementById(quadcore_cpu_conexao).value + document.getElementById(quadcore_letra_3).value + document.getElementById(quadcore_letra_4).value + document.getElementById(quadcore_letra_5).value + document.getElementById(quadcore_letra_6).value + document.getElementById(quadcore_letra_7).value + document.getElementById(quadcore_memoriamassa_conexao).value)
+
+    if (cpu == "cpu") {
+        document.getElementByClassName(cpu_input).style = "background-color: green;"
+        console.log(cpu)
+    } else {
+        document.getElementByClassName(cpu_input).style = "background-color: red;"
+    }
+    if (ula == "ula") {
+        document.getElementByClassName(ula_input).style = "background-color: green;"
+    } else {
+        document.getElementByClassName(ula_input).style = "background-color: red;"
+    }
+    if (registradores == "registradores") {
+        document.getElementByClassName(registradores_input).style = "background-color: green;"
+    } else {
+        document.getElementByClassName(registradores_input).style = "background-color: red;"
+    }
+    if (ram == "ram") {
+        document.getElementByClassName(ram_input).style = "background-color: green;"
+    } else {
+        document.getElementByClassName(ram_input).style = "background-color: red;"
+    }
+    if (rom == "rom") {
+        document.getElementByClassName(rom_input).style = "background-color: green;"
+    } else {
+        document.getElementByClassName(rom_input).style = "background-color: red;"
+    }
+    if (eprom == "eprom") {
+        document.getElementByClassName(eprom_input).style = "background-color: green;"
+    } else {
+        document.getElementByClassName(eprom_input).style = "background-color: red;"
+    }
+    if (flash == "flash") {
+        document.getElementByClassName(flash_input).style = "background-color: green;"
+    } else {
+        document.getElementByClassName(flash_input).style = "background-color: red;"
+    }
+    if (memoriamassa == "memóriademassa") {
+        document.getElementByClassName(memoriamassa_input).style = "background-color: green;"
+    } else {
+        document.getElementByClassName(memoriamassa_input).style = "background-color: red;"
+    }
+    if (dma == "dma") {
+        document.getElementByClassName(dma_input).style = "background-color: green;"
+    } else {
+        document.getElementByClassName(dma_input).style = "background-color: red;"
+    }
+    if (cs == "cs") {
+        document.getElementByClassName(cs_input).style = "background-color: green;"
+    } else {
+        document.getElementByClassName(cs_input).style = "background-color: red;"
+    }
+    if (adressbus == "adressbus") {
+        document.getElementByClassName(adressbus_input).style = "background-color: green;"
+    } else {
+        document.getElementByClassName(adressbus_input).style = "background-color: red;"
+    }
+    if (databus == "databus") {
+        document.getElementByClassName(cpu_input).style = "background-color: green;"
+    } else {
+        document.getElementByClassName(cpu_input).style = "background-color: red;"
+    }
+    if (i5 == "i5") {
+        document.getElementByClassName(i5_input).style = "background-color: green;"
+    } else {
+        document.getElementByClassName(i5_input).style = "background-color: red;"
+    }
+    if (i7 == "i7") {
+        document.getElementByClassName(i7_input).style = "background-color: green;"
+    } else {
+        document.getElementByClassName(i7_input).style = "background-color: red;"
+    }
+    if (dualcore == "dualcore") {
+        document.getElementByClassName(dualcore_input).style = "background-color: green;"
+    } else {
+        document.getElementByClassName(dualcore_input).style = "background-color: red;"
+    }
+    if (quadcore == "quadcore") {
+        document.getElementByClassName(quadcore_input).style = "background-color: green;"
+    } else {
+        document.getElementByClassName(quadcore_input).style = "background-color: red;"
+    }
+}
+</script>
