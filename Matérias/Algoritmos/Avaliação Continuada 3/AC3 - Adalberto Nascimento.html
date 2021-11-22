@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação Continuada 3 - Adalberto Nascimento</title>
+</head>
+<body>
+    <!-- PARTE 1 - HTML -->
+    <h1>Controle de Reembolso de Despesas com Locomoção</h1>
+    Digite o valor do reembolso: <input type="text" id="entrada_reembolso"><button onclick="cadastrar()">Cadastrar</button><br>
+    Total de reembolsos cadastrados: <span id="total_reembolsos"></span>
+
+    <h3>Consulta dos Reembolsos</h3>
+    Digite os valores máximo e mínimo:<br>
+    de: <input type="text" id="min_value" placeholder="Valor Mínimo"><br>
+    até: <input type="text" id="max_value" placeholder="Valor Máximo"><br>
+    <button onclick="pesquisar()">Pesquisar</button><br>
+    <div id="txt"></div><br>
+    <div id="txt_valores"></div>
+</body>
+</html>
+
+<script>
+    // PARTE 1 - JS
+    var valores = [];
+
+    function cadastrar() {
+        var cadastro = Number(entrada_reembolso.value);
+
+        if (cadastro >= 4 && cadastro <= 16) {
+            valores.push(cadastro);
+            total_reembolsos.innerHTML = valores.length;
+            entrada_reembolso.value = "";
+        } else {
+            alert("Ops, o valor do reembolso deve estar entre R$ 4,00 e R$ 16,00.");
+        }
+    }
+
+    // PARTE 2 - JS
+    function pesquisar() {
+        var min = Number(min_value.value);
+        var max = Number(max_value.value);
+        var maior_valor = 4;
+        var menor_valor = 16;
+        var media = 0;
+        var counter = 0;
+
+        if (min < 4 || max > 16) {
+            alert("Cuidado com os valores hein!");
+            min_value.value = "";
+            max_value.value = "";
+        } else {
+            for (counter = 0; counter < valores.length; counter++) {
+                if (valores[counter] >= min && valores[counter] <= max) {
+                    media += valores[counter];
+
+                    if (valores[counter] < menor_valor) {
+                        menor_valor = valores[counter];
+                    } else if (valores[counter] > maior_valor) {
+                        maior_valor = valores[counter];
+                    }
+                }
+            }
+            txt.innerHTML = `O maior valor cadastrado é: R$ ${menor_valor}.<br>
+            O menor valor cadastrado é: R$ ${maior_valor}<br>
+            E a média dos valores cadastrados é de: R$ ${(media / valores.length).toFixed(2)}.<br>`
+
+        }
+    }
+</script>
