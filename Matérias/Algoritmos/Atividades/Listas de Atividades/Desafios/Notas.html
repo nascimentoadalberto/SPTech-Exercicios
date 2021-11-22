@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite o nome do aluno: <input type="text" id="nome_insercao"><br>
+    Digite a nota do aluno inscrito: <input type="text" id="nota_insercao"><button onclick="cadastrar()">Cadastrar</button><br>
+    <button onclick="exibir()">Verificar cadastros</button>
+    <div id="txt"></div>
+</body>
+</html>
+<script>
+    var aluno = [""];
+    var nota = [""];
+
+    function cadastrar() {
+        aluno.push(nome_insercao.value);
+        nome_insercao.value = "";
+        nota.push(nota_insercao.value);
+        nota_insercao.value = "";
+    }
+
+    function exibir() {
+        if (aluno.length == nota.length) {
+            for (contador = 0; contador > aluno.length && contador > nota.length; contador++) {
+                txt.innerHTML += `Aluno: ${aluno[contador]} // Nota: ${nota[contador]}<br>`
+            }
+        } else {
+            alert("Não pode existir um aluno sem nota, nem uma nota sem aluno. Confira suas inserções.")
+        }
+    }
+</script>
