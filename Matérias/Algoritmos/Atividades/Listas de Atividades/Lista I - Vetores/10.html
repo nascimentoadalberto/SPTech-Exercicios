@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite o nome do ônibus: <input type="text" id="onibus_nome">
+    <button onclick="cadastrar()">Cadastrar ônibus</button><br>
+    Pesquise uma linha: <input type="text" id="onibus_search">
+    <button onclick="pesquisar()">Pesquisar</button><br>
+
+    <div id="txt"></div>
+</body>
+</html>
+
+<script>
+    var onibus = [];
+    function cadastrar() {
+        onibus.push(onibus_nome.value);
+        onibus_nome.value = "";
+    }
+
+    function pesquisar() {
+        
+    }
+</script>
