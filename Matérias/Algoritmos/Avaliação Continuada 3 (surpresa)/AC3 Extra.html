@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação Continuada 3 - Extra</title>
+</head>
+<body>
+    <div id="screen1">
+        <h1>AllFat - Auxílio Alimentação</h1><br>
+        Informe o valor dos benefícios: 
+        <input type="text" id="valorBeneficio">
+        <button onclick="cadastrar()">Cadastrar</button>
+        <button onclick="pesquisar()">Pesquisar</button><br>
+        <div id="txt"></div>
+    </div>
+
+    <div id="screen2" style="display: none;">
+        <h1>AllFat - Auxílio Alimentação</h1>
+        Digite o intervalo de valores para a pesquisa<br>
+        de: <input type="text" id="min_value"><br>
+        até <input type="text" id="max_value">
+        <button onclick="resumir()">Resumir intervalo</button><br><br>
+
+        Digite o valor a ser pesquisado: <input type="text" id="pesquisa_entrada">
+        <button onclick="procurar()">Procurar</button>
+        <div id="txt2"></div>
+    </div>
+</body>
+</html>
+
+<script>
+    var beneficios = [];
+
+    function cadastrar() {
+        var beneficio_entrada = Number(valorBeneficio.value)
+
+        if (beneficio_entrada == 0) {
+            alert("Insira um valor, por favor.")
+        } else if(beneficio_entrada < 3 || beneficio_entrada > 35) {
+            alert("Insira um valor entre R$ 3,00 e R$ 35,00")
+        } else {
+            beneficios.push(beneficio_entrada);
+            txt.innerHTML = '';
+            valorBeneficio.value = '';
+            txt.innerHTML += '<h2>Historico dos Benefícios<h2>'
+
+            for (var i = beneficios.length -1; i >= 0; i--) {
+                txt.innerHTML += `<br>A ${i + 1}º ocorrência é: ${beneficios[i]}`
+            }
+        }
+    }
+
+    function pesquisar() {
+        if (beneficios.length > 0){
+            screen1.style.display = 'none'
+            screen2.style.display = 'block'
+        } else {
+            alert("Insira um valor, por favor.")
+        }            
+    }
+
+    function resumir() {
+        var inicio = Number(min_value.value);
+        var fim = Number(max_value.value);
+        var mediaTotal = 0;
+        var max = 3;
+        var min = 35;
+        var soma = 0;
+        var counter = 0;
+
+        if(inicio < 3 || fim > 35){
+            alert("Insira valores entre R$ 3,00 e R$ 35,00")
+        } else {
+            for (counter; counter <= beneficios.length; counter++) {
+                if (beneficios[counter] >= inicio && beneficios[counter] <= fim) {
+                    soma += Number(beneficios[counter]);
+
+                    if (beneficios[counter] < min) {
+                        min = beneficios[counter];
+                    }
+
+                    if (beneficios[counter] > max) {
+                        max = beneficios[counter]
+                    }
+                }
+            }
+            txt2.innerHTML = `<h1>Buscar por um valor de Benefício</h1>
+            <br>O maior valor encontrado no intervalo informado foi ${max}<br>
+            O maior valor encontrado no intervalo informado foi ${min}<br>
+            A média dos valores do intervalo informado foi ${(soma / beneficios.length).toFixed(2)}<br>`
+        }
+
+    }
+    function procurar(){
+        txt2.innerHTML = ''
+        txt2.innerHTML = `<h1>Buscar por um valor de Benefício</h1>` 
+        var retorno = Number(pesquisa_entrada.value);
+
+        if (retorno == '') {
+            alert('Insira algum valor numérico')
+        } else {
+
+            if (beneficios.indexOf(retorno) == -1) {
+                txt2.innerHTML += `O valor R$${retorno} NÃO foi encontrado`;
+            }
+            else{
+                for (var i = 0; i <= beneficios.length; i++) {
+                    if(retorno == beneficios[i]){
+                        txt2.innerHTML += `<br>O valor R$${retorno.toFixed(2)} foi encontrado na ${i + 1}º ocorrência<br>`
+                    }
+                }
+            }
+        }
+    }
+</script>
