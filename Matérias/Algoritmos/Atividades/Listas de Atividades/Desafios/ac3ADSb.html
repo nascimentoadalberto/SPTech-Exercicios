@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alteração</title>
+</head>
+
+<body>
+    <h1>Controle de reembolso de despesas com locomoção</h1>
+    Entre com o valor do reembolso:
+    <input id="reembolso_input" type="number">
+    <button onclick="Cadastrar()">Cadastrar</button> <br>
+    <h3>Total de reembolsos cadastrados = <span id="q">0</span></h3><br>
+
+    <h2>Consulta dos reembolsos</h2>
+    <b>Entre com o intervalo de valores a ser pesquisado:</b> <br>
+    De: <input id="menor_input" type="number">
+    Até: <input id="maior_input" type="number">
+    <button onclick="r()">Resumir intervalo</button>
+    <div id="txt1"></div>
+    <div id="txt2"></div>
+</body>
+</html>
+
+<script>
+    var vetor = [];
+    var min = 0;
+    var max = 0;
+    var maior_valor = 0;
+    var menor_valor = 1000;
+    var que = 0;
+    var soma = 0;
+    var media = 0;
+    
+    function Cadastrar() {
+        if (Number(reembolso_input.value) < 4 || Number(reembolso_input.value) > 16) {
+            alert('O valor deve estar entre 4 e 16 reais')
+        } else {
+            vetor.push(Number(reembolso_input.value)); q.innerHTML = vetor.length
+        }
+        reembolso_input.value = ''
+    }
+
+    function r() {
+        min = Number(menor_input.value);
+        max = Number(maior_input.value);
+    
+        if (min < 4 || min > 16 || min > max) { 
+            alert('Verifique o intervalo.')
+        } else if (max < 4 || max > 16) {
+            alert('Verifique o intervalo.')
+        } else {
+            txt2.innerHTML = ``
+            for (var i = vetor.length; i >= 0; i--) {
+                if (vetor[i] >= min && vetor[i] <= max) {
+                    soma = vetor[i] + soma;
+                    que++;
+                
+                    if (vetor[i] > maior_valor) {
+                        maior_valor = vetor[i]
+                    }
+                    if (vetor[i] < menor_valor) {
+                        menor_valor = vetor[i]
+                    }
+                    txt2.innerHTML += `Ocorrência ${i + Number(1)} - Valor R$ ${vetor[i]} <br>`;
+                } else {
+                    txt2.innerHTML += ``
+                }
+            }
+        
+            media = soma / que;
+            txt1.innerHTML = `<br>Maior valor ${maior_valor} <br>Menor valor ${menor_valor} <br>Média dos intervalos: ${media}<br><br>`;
+            min = 0;
+            max = 0;
+            maior_valor = 0;
+            menor_valor = 1000;
+            que = 0;
+            soma = 0;
+            media = 0;
+        }
+            d.value = '';
+            a.value = '';
+    }
+</script>
