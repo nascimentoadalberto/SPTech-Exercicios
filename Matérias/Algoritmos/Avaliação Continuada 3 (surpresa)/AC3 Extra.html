@@ -95,19 +95,20 @@
     }
     function procurar(){
         txt2.innerHTML = ''
-        txt2.innerHTML = `<h1>Buscar por um valor de Benefício</h1>` 
         var retorno = Number(pesquisa_entrada.value);
 
         if (retorno == '') {
             alert('Insira algum valor numérico')
+        } else if (retorno < 3 || retorno > 35) {
+            alert("Insira valores entre R$ 3,00 e R$ 35,00")
         } else {
-
             if (beneficios.indexOf(retorno) == -1) {
                 txt2.innerHTML += `O valor R$${retorno} NÃO foi encontrado`;
             }
             else{
                 for (var i = 0; i <= beneficios.length; i++) {
                     if(retorno == beneficios[i]){
+                        txt2.innerHTML = `<h1>Buscar por um valor de Benefício</h1>` 
                         txt2.innerHTML += `<br>O valor R$${retorno.toFixed(2)} foi encontrado na ${i + 1}º ocorrência<br>`
                     }
                 }
