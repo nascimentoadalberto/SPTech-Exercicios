@@ -5,10 +5,11 @@ import java.util.Scanner;
 public class Funcao3 {
     // Fazer um depósito
     public static void main(String nome, String conta, Double saldoTotal) {
-        Scanner scan = new Scanner(System.in);
+        Scanner scanDouble = new Scanner(System.in);
+        Scanner scanString = new Scanner(System.in);
 
         System.out.println("Você selecionou a opção do depósito, então, digite o valor a ser depositado: ");
-        Double valorDeposito = scan.nextDouble();
+        Double valorDeposito = scanDouble.nextDouble();
         Double saldoDeposito = saldoTotal + valorDeposito;
 
         System.out.println(
@@ -16,7 +17,7 @@ public class Funcao3 {
                         "S -> sim\n" +
                         "N -> não"
         );
-        String confirmacao = scan.nextLine();
+        String confirmacao = scanString.nextLine();
 
         if (confirmacao.equals("n") || confirmacao.equals("N")) {
             System.out.println("Depósito cancelado. Você voltará ao menu agora.");

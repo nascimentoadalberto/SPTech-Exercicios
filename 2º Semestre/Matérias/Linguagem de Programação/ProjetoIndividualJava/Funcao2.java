@@ -5,10 +5,11 @@ import java.util.Scanner;
 public class Funcao2 {
     // Fazer um saque
     public static void main(String nome, String conta, Double saldoTotal) {
-        Scanner scan = new Scanner(System.in);
+        Scanner scanDouble = new Scanner(System.in);
+        Scanner scanString = new Scanner(System.in);
 
         System.out.println("Você selecionou a opção do saque, então, digite o valor a ser retirado: ");
-        Double valorSaque = scan.nextDouble();
+        Double valorSaque = scanDouble.nextDouble();
         Double saldoSaque = saldoTotal - valorSaque;
 
         System.out.println(
@@ -16,7 +17,7 @@ public class Funcao2 {
                 "S -> sim\n" +
                 "N -> não"
         );
-        String confirmacao = scan.nextLine();
+        String confirmacao = scanString.nextLine();
 
         if (valorSaque > saldoTotal) {
             System.out.println("Saque cancelado. Você voltará ao menu agora.");
