@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Funcao4 {
     // Fazer uma transferência
-    public static void main(String nome, String conta, Double saldoTotal) {
+    public static void main(String nome, String conta, Double saldoTotal, Double valorInvestido) {
         Scanner scanDouble = new Scanner(System.in);
         Scanner scanString = new Scanner(System.in);
 
@@ -15,7 +15,7 @@ public class Funcao4 {
         String nomeDestinatario = scanString.nextLine();
         System.out.print("Banco do Destinatário: ");
         String bancoDestinatario = scanString.nextLine();
-        System.out.print("Agora, digite o valor a ser depositado: ");
+        System.out.print("Agora, digite o valor a ser transferido: ");
         Double valorTransfer = scanDouble.nextDouble();
         Double saldoTransfer = saldoTotal - valorTransfer;
 
@@ -28,12 +28,12 @@ public class Funcao4 {
         String confirmacao = scanString.nextLine();
 
         if (valorTransfer > saldoTotal) {
-            System.out.println("Transferência cancelada. Você voltará ao menu agora.");
-            Utils.Menu(nome, conta, saldoTotal);
+            System.out.println("Transferência cancelada. O valor da transferência é maior que o seu saldo. Você voltará ao menu agora.");
+            Utils.Menu(nome, conta, saldoTotal, valorInvestido);
         } else {
             if (confirmacao.equals("n") || confirmacao.equals("N")) {
-                System.out.println("Transferência cancelada. Você voltará ao menu agora.");
-                Utils.Menu(nome, conta, saldoTotal);
+                System.out.println("Transferência negada. Você voltará ao menu agora.");
+                Utils.Menu(nome, conta, saldoTotal, valorInvestido);
             } else if (confirmacao.equals("S") || confirmacao.equals("s")) {
                 System.out.println(String.format(
                         " Nome                       | %s \n" +
@@ -50,7 +50,7 @@ public class Funcao4 {
 
                 saldoTotal = saldoTransfer;
 
-                Utils.RetornoMenu(nome, conta, saldoTotal);
+                Utils.RetornoMenu(nome, conta, saldoTotal, valorInvestido);
             }
         }
     }
