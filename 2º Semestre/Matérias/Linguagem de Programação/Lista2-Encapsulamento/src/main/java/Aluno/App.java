@@ -1,3 +1,7 @@
+package Aluno;
+
+import Aluno.Aluno;
+
 public class App {
     public static void main(String[] args) {
         Aluno aluno1 = new Aluno();

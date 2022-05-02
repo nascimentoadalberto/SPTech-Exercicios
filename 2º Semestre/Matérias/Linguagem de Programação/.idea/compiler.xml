@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Lista2-Encapsulamento" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="adalberto-nascimento-c1" target="17" />
+      <module name="Lista2-Encapsulamento" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

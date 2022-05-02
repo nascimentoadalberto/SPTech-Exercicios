@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Linguagem de Programação/Linguagem de Programação.iml" filepath="$PROJECT_DIR$/Linguagem de Programação/Linguagem de Programação.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Matérias.iml" filepath="$PROJECT_DIR$/Matérias.iml" />
+    </modules>
+  </component>
+</project>

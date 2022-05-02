@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Linguagem de Programação.iml" filepath="$PROJECT_DIR$/Linguagem de Programação.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lista2-Encapsulamento/Lista2-Encapsulamento.iml" filepath="$PROJECT_DIR$/Lista2-Encapsulamento/Lista2-Encapsulamento.iml" />
     </modules>
   </component>
 </project>
