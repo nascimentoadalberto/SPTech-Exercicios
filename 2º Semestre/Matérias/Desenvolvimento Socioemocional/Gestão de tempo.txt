@@ -1,0 +1,39 @@
+===================================================================================
+
+1. PROJETO OU SITUAÇÃO QUE MAIS OCUPA A MENTE NO MOMENTO
+-> A. demandas de Angular (literalmente as primeiras telas do sistema, nunca mexi antes com Angular, não consigo exemplos dentro da empresa por motivos de política de privacidade e segurança de projetos, nem meu gestor nem ninguém no squad consegue me ajudar muito, já que também nunca mexeu com Angular)
+-> B. questões pessoais envolvendo a saúde da minha mãe
+-> C. Dailies conduzidas pelo Leonardo Magalhães (co-fundador da empresa, é impossível não sentir um pouco de pressão), e, eventualmente, debates sobre o cliente
+
+===================================================================================
+
+2. FRASE QUE RESUMA O RESULTADO ESPERADO PARA RESOLVER O PROBLEMA
+-> A. preciso finalizar essas demandas e treinar MUITO mais sobre TypeScript e Angular.
+-> B. preciso aceitar o fato de que nem sempre posso estar ao lado dela e cuidar dela, por mais que eu queira, e aceitar o fato de que a saúde dela é frágil e ela é teimosa e não vai aceitar que eu intervenha sempre.
+-> C. preciso relaxar e me manter calmo, e me preparar para dizer o que tenho a dizer
+
+===================================================================================
+
+3. AÇÃO FÍSICA NECESSÁRIA PARA AVANÇAR NO OBJETIVO
+-> A. procurar conteúdo no YouTube, Udemy, Alura e etc sobre TypeScript, Angular e SCSS, e desenvolver telas e projetos durante os finais de semana.
+-> B. compreender que tudo na vida vem e vai, as coisas aparecem e somem, pessoas, sentimentos, situações, doenças, e que, independente do que aconteça, eu a amo e sei que ela me ama e sempre quis o melhor para mim e minhas irmãs e deu seu máximo para que pudéssemos ser felizes.
+-> C. sempre antes das Dailies, revisar o que fiz durante o dia, anotando ao longo do dia as tarefas concluídas e em andamento, e elaborar dúvidas, sugestões e manter o máximo de atenção possível.
+
+===================================================================================
+
+4. QUAL O SENTIMENTO?
+-> A. importância de entender o que precisa ser feito, quebra de ansiedade
+-> B. tristeza, dor, meio que uma espécie de luto, vem textinho no final da atividade...
+-> C. motivação de dar meu melhor dentro do estágio
+
+===================================================================================
+
+5. SOLUÇÃO
+-> A. Objetivo: Aumentar proeficiência em TypeScript e Angular // 
+-> B. Objetivo: 
+-> C. Objetivo: 
+
+===================================================================================
+
+
+eu sei q é uma questão de tempo, e não sei por quanto tempo ela vai resistir... pode ser em 5 anos, em 3 meses, em 2 semanas, hoje à noite eu posso chegar em casa e minha mãe não estar ali... é realmente muito complicado não ter noção de quanto tempo tenho com ela, e (no momento dessa atividade) tem dias que eu não a vejo, nem sei como ela está, e isso dói muito, não ser tão presente na vida dela assim, mesmo morando na mesma casa, mesmo dormindo a poucos metros dela, me vejo extremamente distante da minha família, e essa questão da saúde dela quebrou demais meu emocional... tem dias que eu não consigo nem mesmo levantar da cama sem respirar fundo e continuar seguindo em frente... muita gente já me disse que sou antissocial, que não tenho/demonstro sentimentos, mas isso realmente me abalou mais do que qualquer outra coisa, muito mais do que eu imaginei em outros momentos. saber que vou chegar um dia em casa e não ver minha mãe ali gera uma sensação estranha, como se o tempo estivesse urgente e correndo, mas mesmo assim não posso simplesmente abrir mão das minhas responsabilidades e ir pra perto dela...

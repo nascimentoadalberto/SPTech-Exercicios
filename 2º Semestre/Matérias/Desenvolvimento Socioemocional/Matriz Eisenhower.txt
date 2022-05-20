@@ -1,0 +1,19 @@
+>>> Diferença da Matriz Eisenhower para a Tríade do Tempo
+	Na Tríade do tempo nós especificamos o quanto nós fazemos as tarefas com: nunca, raramente, as vezes, quase sempre e sempre e depois classificamos a tarefa com importante, urgente e circunstancial. Já na Matriz de Eisenhower nós classificamos as prioridades das tarefas em 4 quadrados sendo:
+		1 - Muito importante e muito urgente
+		2 - Muito importante e pouco urgente
+		3 - Pouco importante e pouco urgente
+		4 - Pouco importante e muito urgente
+	Assim na Matriz de Eisenhower temos mais detalhamento na hora de dar prioridades as nossas tarefas.
+
+
+>>> Quando a Matriz pode não ser eficaz?
+	Falta de conhecimento, falta de tempo, regulamentos e burocracia ou múltiplas tarefas urgentes/importantes podem tornar isso impossível, tornando a matriz de prioridades um pouco menos eficaz quando se trata de tomada de decisões e gerenciamento de tempo. Existem algumas desvantagens associadas à matriz de priorização. Mais significativamente, muitas vezes é difícil determinar a importância de uma tarefa com precisão. Isso significa que você pode acabar delegando uma tarefa ao recurso errado e experimentar uma queda na qualidade. Além disso, é importante lembrar que talvez nem sempre seja possível agir imediatamente quando você está lidando com atividades urgentes.
+
+
+>>> Como utilizar a ferramenta?
+	a matriz separa as tarefas em 4 categorias, baseadas no grau de importância e urgência e nivela as tarefas com uma associação entre esses graus: importância x urgência
+	urgente e importante (tarefas a serem concluídas imediatamente)
+	importante, mas não urgente (tarefas a agendar para mais tarde)
+	urgente, mas não importante (tarefas para delegar a outra pessoa)
+	nem urgente nem importante (tarefas a serem eliminadas)
